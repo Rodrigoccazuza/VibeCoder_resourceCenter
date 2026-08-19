@@ -2001,5 +2001,18 @@ export const resources: Resource[] = [
     "audience": "Marketer",
     "access": "Freemium",
     "keywords": "email design, email marketing, ecommerce, newsletter inspiration, campaign research, competitor analysis, promotional email"
+  },
+  {
+    "id": 154,
+    "name": "Lorem Ipsum Generator",
+    "type": "Tool",
+    "url": "https://loremipsum.io/generator/",
+    "platform": "LoremIpsum.io",
+    "category": "Resources",
+    "description": "A browser-based generator for creating Lorem Ipsum placeholder text by character, word, sentence, or paragraph count.",
+    "bestFor": "Producing temporary copy for wireframes, UI mockups, prototypes, editorial layouts, and typography tests.",
+    "audience": "Designer",
+    "access": "Free",
+    "keywords": "lorem ipsum, placeholder text, copy generator, wireframes, prototyping, typography, layout testing"
   }
 ];
