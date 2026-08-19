@@ -111,6 +111,7 @@ const CATEGORY_META: Record<string, { code: string; copy: string }> = {
   AI: { code: "AI", copy: "Generate, enhance and automate" },
   Branding: { code: "BR", copy: "Color, identity and brand assets" },
   Business: { code: "BU", copy: "Freelance and client workflows" },
+  "Email Design": { code: "EM", copy: "Campaigns, newsletters and references" },
   Figma: { code: "FG", copy: "Plugins, systems and components" },
   Inspiration: { code: "IN", copy: "References for stronger concepts" },
   Photography: { code: "PH", copy: "Stock imagery and visual assets" },
