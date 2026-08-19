@@ -1988,6 +1988,18 @@ export const resources: Resource[] = [
     "audience": "Developer",
     "access": "Subscription",
     "keywords": "web design, cms, development, no-code"
+  },
+  {
+    "id": 153,
+    "name": "MILLED",
+    "type": "Website",
+    "url": "https://milled.com/",
+    "platform": "Milled",
+    "category": "Email Design",
+    "description": "A searchable archive of e-commerce email newsletters and sales campaigns from thousands of brands.",
+    "bestFor": "Email design inspiration, campaign research, competitor tracking, promotional copy references, and discovering e-commerce messaging patterns.",
+    "audience": "Marketer",
+    "access": "Freemium",
+    "keywords": "email design, email marketing, ecommerce, newsletter inspiration, campaign research, competitor analysis, promotional email"
   }
 ];
-
