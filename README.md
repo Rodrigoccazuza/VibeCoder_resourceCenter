@@ -1,6 +1,6 @@
 # VibeCoder Resource Center
 
-A responsive, searchable resource center built from Rodrigo Cazuza's 154-item Notion database.
+A responsive, searchable resource center built from Rodrigo Cazuza's 168-item Notion database.
 
 ## Project inputs
 
