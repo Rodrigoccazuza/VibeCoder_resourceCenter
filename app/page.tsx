@@ -113,6 +113,7 @@ const CATEGORY_META: Record<string, { code: string; copy: string }> = {
   Business: { code: "BU", copy: "Freelance and client workflows" },
   "Email Design": { code: "EM", copy: "Campaigns, newsletters and references" },
   Figma: { code: "FG", copy: "Plugins, systems and components" },
+  "Icon Libraries": { code: "IC", copy: "UI symbols, brands and technology logos" },
   Inspiration: { code: "IN", copy: "References for stronger concepts" },
   Photography: { code: "PH", copy: "Stock imagery and visual assets" },
   Productivity: { code: "PR", copy: "Plan, capture and publish" },
