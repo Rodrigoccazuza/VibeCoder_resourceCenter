@@ -109,6 +109,13 @@ const KNOWN_LINKS: Record<string, string> = {
 
 const CATEGORY_META: Record<string, { code: string; copy: string }> = {
   AI: { code: "AI", copy: "Generate, enhance and automate" },
+  "AI Skills": { code: "SK", copy: "Reusable guidance for Codex and Claude" },
+  "3D & Motion": { code: "3D", copy: "Models, animation and cinematic references" },
+  "Colors & Backgrounds": { code: "CL", copy: "Accessible palettes, gradients and patterns" },
+  "Design Libraries": { code: "DL", copy: "Components, templates and illustrations" },
+  "Figma Plugins": { code: "FP", copy: "Extend Figma with focused workflows" },
+  "GitHub Repositories": { code: "GH", copy: "Open-source tools and implementation libraries" },
+  "Workflows & Guides": { code: "WG", copy: "Practical checklists and production guidance" },
   Branding: { code: "BR", copy: "Color, identity and brand assets" },
   Business: { code: "BU", copy: "Freelance and client workflows" },
   "Email Design": { code: "EM", copy: "Campaigns, newsletters and references" },
@@ -124,11 +131,13 @@ const CATEGORY_META: Record<string, { code: string; copy: string }> = {
 
 const categories = Object.keys(CATEGORY_META);
 const types = [...new Set(resources.map((resource) => resource.type))].sort();
+const platforms = [...new Set(resources.map((resource) => resource.platform))].sort();
+const FEATURED_COLLECTIONS = ["GitHub Repositories", "Figma Plugins", "AI Skills", "3D & Motion", "Design Libraries"];
 
 function getLink(resource: Resource) {
   const known = resource.url || KNOWN_LINKS[resource.name];
   if (known) return { href: known, verified: true };
-  if (resource.category === "Figma") {
+  if (resource.category === "Figma" || resource.category === "Figma Plugins") {
     return {
       href: `https://www.figma.com/community/search?query=${encodeURIComponent(resource.name)}`,
       verified: false,
@@ -164,6 +173,7 @@ export default function Home() {
   const [category, setCategory] = useState("All resources");
   const [type, setType] = useState("All types");
   const [access, setAccess] = useState("All access");
+  const [platform, setPlatform] = useState("All platforms");
   const [visible, setVisible] = useState(24);
   const [mobileNav, setMobileNav] = useState(false);
 
@@ -174,14 +184,15 @@ export default function Home() {
       return matchesQuery
         && (category === "All resources" || resource.category === category)
         && (type === "All types" || resource.type === type)
-        && (access === "All access" || resource.access === access);
+        && (access === "All access" || resource.access === access)
+        && (platform === "All platforms" || resource.platform === platform);
     });
-  }, [query, category, type, access]);
+  }, [query, category, type, access, platform]);
 
   const accessOptions = [...new Set(resources.map((resource) => resource.access))].sort();
   const officialCount = resources.filter((resource) => getLink(resource).verified).length;
   const selectCategory = (next: string) => { setCategory(next); setVisible(24); setMobileNav(false); };
-  const reset = () => { setQuery(""); setCategory("All resources"); setType("All types"); setAccess("All access"); setVisible(24); };
+  const reset = () => { setQuery(""); setCategory("All resources"); setType("All types"); setAccess("All access"); setPlatform("All platforms"); setVisible(24); };
 
   return (
     <div className="app-shell">
@@ -213,7 +224,7 @@ export default function Home() {
           <div className="hero-content">
             <p className="eyebrow"><span>VibeCoder library</span><b>Updated collection</b></p>
             <h1 id="hero-title">Build better digital work with <em>useful resources.</em></h1>
-            <p>Discover design references, AI tools, Figma plugins, typography, assets and front-end utilities—organized around what each resource helps you achieve.</p>
+            <p>Search design references, GitHub repositories, Figma plugins, AI skills, motion tools and production guides, organized around what each resource helps you achieve.</p>
             <a href="#resource-grid" className="primary-button">Explore the library <Icon name="arrow" /></a>
           </div>
           <div className="hero-stats" aria-label="Library statistics"><div><strong>{resources.length}</strong><span>Resources</span></div><div><strong>{categories.length}</strong><span>Categories</span></div><div><strong>{officialCount}</strong><span>Direct links</span></div></div>
@@ -223,7 +234,7 @@ export default function Home() {
         <section className="category-overview" aria-labelledby="category-title">
           <div className="section-heading"><div><p className="eyebrow plain">Browse by focus</p><h2 id="category-title">Choose your starting point</h2></div><button onClick={() => selectCategory("All resources")}>View everything <Icon name="arrow" /></button></div>
           <div className="category-cards">
-            {categories.slice(0, 5).map((item) => (
+            {FEATURED_COLLECTIONS.map((item) => (
               <button key={item} className={category === item ? "selected" : ""} onClick={() => selectCategory(item)}><span className="category-card-code">{CATEGORY_META[item].code}</span><span><strong>{item}</strong><small>{CATEGORY_META[item].copy}</small></span><b>{resources.filter((resource) => resource.category === item).length}</b></button>
             ))}
           </div>
@@ -235,7 +246,8 @@ export default function Home() {
             <div className="filters" aria-label="Resource filters">
               <label><span className="sr-only">Filter by resource type</span><select value={type} onChange={(event) => { setType(event.target.value); setVisible(24); }}><option>All types</option>{types.map((item) => <option key={item}>{item}</option>)}</select></label>
               <label><span className="sr-only">Filter by access</span><select value={access} onChange={(event) => { setAccess(event.target.value); setVisible(24); }}><option>All access</option>{accessOptions.map((item) => <option key={item}>{item}</option>)}</select></label>
-              {(query || category !== "All resources" || type !== "All types" || access !== "All access") && <button className="reset-button" onClick={reset}>Reset</button>}
+              <label><span className="sr-only">Filter by platform or creator</span><select value={platform} onChange={(event) => { setPlatform(event.target.value); setVisible(24); }}><option>All platforms</option>{platforms.map((item) => <option key={item}>{item}</option>)}</select></label>
+              {(query || category !== "All resources" || type !== "All types" || access !== "All access" || platform !== "All platforms") && <button className="reset-button" onClick={reset}>Reset</button>}
             </div>
           </div>
 
@@ -245,11 +257,11 @@ export default function Home() {
               const domain = getDomain(resource);
               return (
                 <a className="resource-card" key={resource.id} href={link.href} target="_blank" rel="noreferrer" aria-label={`${resource.name}: ${link.verified ? "open official resource" : "find official resource"}`}>
-                  <div className={`resource-cover category-${resource.category.toLowerCase().replaceAll(" ", "-")}`}>
+                  <div className={`resource-cover category-${resource.category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}>
                     <span className="cover-grid" aria-hidden="true" /><span className="cover-code">{CATEGORY_META[resource.category]?.code || "RS"}</span><strong>{resource.name}</strong><small>{domain}</small><span className="cover-arrow"><Icon name="arrow" /></span>
                   </div>
                   <div className="resource-body">
-                    <div className="card-meta"><span>{resource.category}</span><span>{resource.type}</span></div><h3>{resource.name}</h3><p>{resource.description}</p>
+                    <div className="card-meta"><span>{resource.category}</span><span>{resource.type}</span><span>{resource.platform}</span></div><h3>{resource.name}</h3><p>{resource.description}</p>
                     <div className="best-for"><b>Best for</b><span>{resource.bestFor.replace(/^Use this resource for\s*/i, "")}</span></div>
                     <div className="card-footer"><span>{resource.access}</span><b>{link.verified ? "Open resource" : "Find official page"}<Icon name="arrow" /></b></div>
                   </div>

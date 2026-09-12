@@ -1,6 +1,6 @@
 # VibeCoder Resource Center
 
-A responsive, searchable resource center built from Rodrigo Cazuza's 168-item Notion database.
+A responsive, searchable resource center built from Rodrigo Cazuza's 214-item Notion database.
 
 ## Project inputs
 
@@ -9,7 +9,7 @@ A responsive, searchable resource center built from Rodrigo Cazuza's 168-item No
 - **Audience:** Designers, front-end developers, creative collaborators, and the observed Rodrigo Cazuza client audience. The client persona remains an inference.
 - **Dimensions / breakpoints:** Fluid desktop, tablet, and mobile layouts; key layout changes at 1180 px, 820 px, and 600 px.
 - **Technology:** Next.js 16, React 19, TypeScript, CSS, and the OpenAI Sites/Vinext runtime.
-- **Content supplied:** 154 Notion database records, a dashboard reference screenshot, and the confirmed Rodrigo Cazuza design-system specification.
+- **Content supplied:** 214 Notion database records, a dashboard reference screenshot, and the confirmed Rodrigo Cazuza design-system specification.
 - **Accessibility / compliance:** Keyboard navigation, semantic landmarks, visible focus, reduced-motion support, descriptive external-link labels, and responsive overflow protection.
 
 ## Requirement-to-token mapping
@@ -28,7 +28,8 @@ A responsive, searchable resource center built from Rodrigo Cazuza's 168-item No
 ## Behavior
 
 - Search scans names, descriptions, use cases, platform names, and keywords.
-- Category, type, and access filters compose together.
+- Featured collections provide direct entry points to GitHub repositories, Figma plugins, AI skills, 3D and motion tools, and design libraries.
+- Category, type, access, and platform filters compose together.
 - Cards open official destinations in a new tab when confirmed.
 - Entries without a confirmed destination are clearly labeled **Find official page** and open an exact official-page lookup rather than silently using an unverified link.
 - Twenty-four cards render initially; the remaining matching records load in batches.
