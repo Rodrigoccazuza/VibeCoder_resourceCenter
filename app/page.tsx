@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { resources, type Resource } from "./resources";
 import { motionResources } from "./motionResources";
+import { uiLibraries } from "./uiLibraries";
 
 const KNOWN_LINKS: Record<string, string> = {
   "Adobe Background Remover": "https://www.adobe.com/express/feature/image/remove-background",
@@ -113,6 +114,7 @@ const CATEGORY_META: Record<string, { code: string; copy: string }> = {
   "AI Skills": { code: "SK", copy: "Reusable guidance for Codex and Claude" },
   "3D & Motion": { code: "3D", copy: "Models, animation and cinematic references" },
   "Motion & Interaction": { code: "MO", copy: "Microinteractions, scroll effects and UI animation" },
+  "UI Component Libraries": { code: "UI", copy: "React, Tailwind, headless and copy-paste UI systems" },
   "Colors & Backgrounds": { code: "CL", copy: "Accessible palettes, gradients and patterns" },
   "Design Libraries": { code: "DL", copy: "Components, templates and illustrations" },
   "Figma Plugins": { code: "FP", copy: "Extend Figma with focused workflows" },
@@ -132,17 +134,21 @@ const CATEGORY_META: Record<string, { code: string; copy: string }> = {
 };
 
 const MOTION_RECLASSIFICATIONS = new Set(["React Bits", "Three UI"]);
+const UI_LIBRARY_RECLASSIFICATIONS = new Set(["21st.dev", "Canvas UI", "OriginKit", "shadcn/ui"]);
 const resourceCatalog: Resource[] = [
-  ...resources.map((resource) => MOTION_RECLASSIFICATIONS.has(resource.name)
-    ? { ...resource, category: "Motion & Interaction" }
-    : resource),
+  ...resources.map((resource) => {
+    if (MOTION_RECLASSIFICATIONS.has(resource.name)) return { ...resource, category: "Motion & Interaction" };
+    if (UI_LIBRARY_RECLASSIFICATIONS.has(resource.name)) return { ...resource, category: "UI Component Libraries" };
+    return resource;
+  }),
   ...motionResources,
+  ...uiLibraries,
 ];
 
 const categories = Object.keys(CATEGORY_META);
 const types = [...new Set(resourceCatalog.map((resource) => resource.type))].sort();
 const platforms = [...new Set(resourceCatalog.map((resource) => resource.platform))].sort();
-const FEATURED_COLLECTIONS = ["Motion & Interaction", "GitHub Repositories", "Figma Plugins", "AI Skills", "3D & Motion", "Design Libraries"];
+const FEATURED_COLLECTIONS = ["UI Component Libraries", "Motion & Interaction", "GitHub Repositories", "Figma Plugins", "AI Skills", "3D & Motion", "Design Libraries"];
 
 function getLink(resource: Resource) {
   const known = resource.url || KNOWN_LINKS[resource.name];
