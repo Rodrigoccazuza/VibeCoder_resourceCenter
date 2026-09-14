@@ -1,0 +1,34 @@
+name: Pin sidebar categories
+
+on:
+  push:
+    paths:
+      - 'scripts/pin-sidebar-categories.mjs'
+      - '.github/workflows/pin-sidebar-categories.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  pin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - name: Pin sidebar categories
+        run: node scripts/pin-sidebar-categories.mjs
+      - name: Commit sidebar update
+        run: |
+          if git diff --quiet; then
+            echo "No sidebar changes needed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app/page.tsx
+          git commit -m "fix: pin new categories in left navigation"
+          git push
