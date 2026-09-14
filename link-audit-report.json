@@ -1,0 +1,863 @@
+{
+  "generatedAt": "2026-09-14T03:56:39.372Z",
+  "totalCards": 247,
+  "testedLinks": 206,
+  "unresolved": [
+    {
+      "name": "Film AI",
+      "category": "AI",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Better Logo Figma Plugin",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Content Reel",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Contrast Figma Plugin",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Design Documentation Figma Plugin",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Feather Icons Figma Plugin",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Figma Components",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Framer Extension for Figma",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Html to Design Figma Plugin",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Insert Big Image Figma Plugin",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "LottieFiles for Figma",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Mockups Figma Plugin",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Noise & Texture Figma Plugin",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Perspective Toolkit Figma Plugin",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Pitchdeck Figma Plugin",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Real People Figma Plugin",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Vectorize Figma Plugin",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "WebP Exporter Figma Plugin",
+      "category": "Figma",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "App Shots",
+      "category": "Inspiration",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "btw Landing Pages",
+      "category": "Inspiration",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Cherryp",
+      "category": "Inspiration",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Pafolios",
+      "category": "Inspiration",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "SaaS Landing Page",
+      "category": "Inspiration",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Super Hero",
+      "category": "Inspiration",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Animated Emojis",
+      "category": "Resources",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Design Systems Brasileiros",
+      "category": "Resources",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Design Systems for Figma",
+      "category": "Resources",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Free Illustrations",
+      "category": "Resources",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Halo UI/UX",
+      "category": "Resources",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Handz",
+      "category": "Resources",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Icon Hunt",
+      "category": "Resources",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Noise & Gradient",
+      "category": "Resources",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "UX Challenges",
+      "category": "Resources",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Boosters",
+      "category": "Web Development",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "CSS Packer",
+      "category": "Web Development",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Export SVG Extension",
+      "category": "Web Development",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Flowbase",
+      "category": "Web Development",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Agent Skills Pack",
+      "category": "AI Skills",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Graphify",
+      "category": "AI Skills",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "Liquid Logo",
+      "category": "GitHub Repositories",
+      "file": "app/resources.ts"
+    },
+    {
+      "name": "LiquidGlass.js",
+      "category": "GitHub Repositories",
+      "file": "app/resources.ts"
+    }
+  ],
+  "broken": [
+    {
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com/",
+      "category": "AI",
+      "file": "app/resources.ts",
+      "resolved": "https://chatgpt.com/",
+      "requestedUrl": "https://chatgpt.com/",
+      "finalUrl": "https://chatgpt.com/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Codex by GPT",
+      "url": "https://openai.com/codex/",
+      "category": "AI",
+      "file": "app/resources.ts",
+      "resolved": "https://openai.com/codex/",
+      "requestedUrl": "https://openai.com/codex/",
+      "finalUrl": "https://openai.com/codex/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Midjourney",
+      "url": "https://www.midjourney.com/",
+      "category": "AI",
+      "file": "app/resources.ts",
+      "resolved": "https://www.midjourney.com/",
+      "requestedUrl": "https://www.midjourney.com/",
+      "finalUrl": "https://www.midjourney.com/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Nano Banana",
+      "url": "https://gemini.google.com/",
+      "category": "AI",
+      "file": "app/resources.ts",
+      "resolved": "https://gemini.google.com/",
+      "requestedUrl": "https://gemini.google.com/",
+      "finalUrl": null,
+      "status": null,
+      "ok": false,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Visual Electric",
+      "url": "https://visualelectric.com/",
+      "category": "AI",
+      "file": "app/resources.ts",
+      "resolved": "https://visualelectric.com/",
+      "requestedUrl": "https://visualelectric.com/",
+      "finalUrl": null,
+      "status": null,
+      "ok": false,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Canva",
+      "url": "https://www.canva.com/",
+      "category": "Branding",
+      "file": "app/resources.ts",
+      "resolved": "https://www.canva.com/",
+      "requestedUrl": "https://www.canva.com/",
+      "finalUrl": "https://www.canva.com/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Coolors",
+      "url": "https://coolors.co/",
+      "category": "Branding",
+      "file": "app/resources.ts",
+      "resolved": "https://coolors.co/",
+      "requestedUrl": "https://coolors.co/",
+      "finalUrl": "https://coolors.co/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Upwork",
+      "url": "https://www.upwork.com/",
+      "category": "Business",
+      "file": "app/resources.ts",
+      "resolved": "https://www.upwork.com/",
+      "requestedUrl": "https://www.upwork.com/",
+      "finalUrl": "https://www.upwork.com/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Figma Community",
+      "url": "https://www.figma.com/community",
+      "category": "Figma",
+      "file": "app/resources.ts",
+      "resolved": "https://www.figma.com/community",
+      "requestedUrl": "https://www.figma.com/community",
+      "finalUrl": "https://www.figma.com/community",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Land Book",
+      "url": "https://land-book.com/",
+      "category": "Inspiration",
+      "file": "app/resources.ts",
+      "resolved": "https://land-book.com/",
+      "requestedUrl": "https://land-book.com/",
+      "finalUrl": "https://land-book.com/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Lapa Ninja",
+      "url": "https://www.lapa.ninja/",
+      "category": "Inspiration",
+      "file": "app/resources.ts",
+      "resolved": "https://www.lapa.ninja/",
+      "requestedUrl": "https://www.lapa.ninja/",
+      "finalUrl": "https://www.lapa.ninja/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Page Flows",
+      "url": "https://pageflows.com/",
+      "category": "Inspiration",
+      "file": "app/resources.ts",
+      "resolved": "https://pageflows.com/",
+      "requestedUrl": "https://pageflows.com/",
+      "finalUrl": "https://pageflows.com/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Screenshots Club",
+      "url": "https://screenshots.club/",
+      "category": "Inspiration",
+      "file": "app/resources.ts",
+      "resolved": "https://screenshots.club/",
+      "requestedUrl": "https://screenshots.club/",
+      "finalUrl": null,
+      "status": null,
+      "ok": false,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Pexels",
+      "url": "https://www.pexels.com/",
+      "category": "Photography",
+      "file": "app/resources.ts",
+      "resolved": "https://www.pexels.com/",
+      "requestedUrl": "https://www.pexels.com/",
+      "finalUrl": "https://www.pexels.com/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Pixabay",
+      "url": "https://pixabay.com/",
+      "category": "Photography",
+      "file": "app/resources.ts",
+      "resolved": "https://pixabay.com/",
+      "requestedUrl": "https://pixabay.com/",
+      "finalUrl": "https://pixabay.com/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Unsplash",
+      "url": "https://unsplash.com/",
+      "category": "Photography",
+      "file": "app/resources.ts",
+      "resolved": "https://unsplash.com/",
+      "requestedUrl": "https://unsplash.com/",
+      "finalUrl": "https://unsplash.com/.within.website?redir=%2F",
+      "status": 401,
+      "ok": false
+    },
+    {
+      "name": "Comunidade Skills",
+      "url": "https://www.comunidadeskills.com/",
+      "category": "Resources",
+      "file": "app/resources.ts",
+      "resolved": "https://www.comunidadeskills.com/",
+      "requestedUrl": "https://www.comunidadeskills.com/",
+      "finalUrl": null,
+      "status": null,
+      "ok": false,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Icons8",
+      "url": "https://icons8.com/",
+      "category": "Resources",
+      "file": "app/resources.ts",
+      "resolved": "https://icons8.com/",
+      "requestedUrl": "https://icons8.com/",
+      "finalUrl": "https://icons8.com/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "UI8",
+      "url": "https://ui8.net/",
+      "category": "Resources",
+      "file": "app/resources.ts",
+      "resolved": "https://ui8.net/",
+      "requestedUrl": "https://ui8.net/",
+      "finalUrl": "https://ui8.net/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Brumm Shadow Generator",
+      "url": "https://shadows.brumm.af/",
+      "category": "Web Development",
+      "file": "app/resources.ts",
+      "resolved": "https://shadows.brumm.af/",
+      "requestedUrl": "https://shadows.brumm.af/",
+      "finalUrl": null,
+      "status": null,
+      "ok": false,
+      "error": "This operation was aborted"
+    },
+    {
+      "name": "Framer",
+      "url": "https://www.framer.com/",
+      "category": "Web Development",
+      "file": "app/resources.ts",
+      "resolved": "https://www.framer.com/",
+      "requestedUrl": "https://www.framer.com/",
+      "finalUrl": null,
+      "status": null,
+      "ok": false,
+      "error": "This operation was aborted"
+    },
+    {
+      "name": "Uiverse",
+      "url": "https://uiverse.io/",
+      "category": "Web Development",
+      "file": "app/resources.ts",
+      "resolved": "https://uiverse.io/",
+      "requestedUrl": "https://uiverse.io/",
+      "finalUrl": "https://uiverse.io/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "MILLED",
+      "url": "https://milled.com/",
+      "category": "Email Design",
+      "file": "app/resources.ts",
+      "resolved": "https://milled.com/",
+      "requestedUrl": "https://milled.com/",
+      "finalUrl": "https://milled.com/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Simple Icons",
+      "url": "https://simpleicons.org/",
+      "category": "Icon Libraries",
+      "file": "app/resources.ts",
+      "resolved": "https://simpleicons.org/",
+      "requestedUrl": "https://simpleicons.org/",
+      "finalUrl": "https://simpleicons.org/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Kigen",
+      "url": "https://www.figma.com/community/search?query=Kigen&resource_type=plugins",
+      "category": "Figma Plugins",
+      "file": "app/resources.ts",
+      "resolved": "https://www.figma.com/community/search?query=Kigen&resource_type=plugins",
+      "requestedUrl": "https://www.figma.com/community/search?query=Kigen&resource_type=plugins",
+      "finalUrl": "https://www.figma.com/community/search?query=Kigen&resource_type=plugins",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Magnifier",
+      "url": "https://www.figma.com/community/search?query=Magnifier&resource_type=plugins",
+      "category": "Figma Plugins",
+      "file": "app/resources.ts",
+      "resolved": "https://www.figma.com/community/search?query=Magnifier&resource_type=plugins",
+      "requestedUrl": "https://www.figma.com/community/search?query=Magnifier&resource_type=plugins",
+      "finalUrl": "https://www.figma.com/community/search?query=Magnifier&resource_type=plugins",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Mattewy.dev",
+      "url": "https://mattewy.dev/",
+      "category": "Inspiration",
+      "file": "app/resources.ts",
+      "resolved": "https://mattewy.dev/",
+      "requestedUrl": "https://mattewy.dev/",
+      "finalUrl": null,
+      "status": null,
+      "ok": false,
+      "error": "fetch failed"
+    },
+    {
+      "name": "ShotDeck",
+      "url": "https://shotdeck.com/",
+      "category": "3D & Motion",
+      "file": "app/resources.ts",
+      "resolved": "https://shotdeck.com/",
+      "requestedUrl": "https://shotdeck.com/",
+      "finalUrl": "https://shotdeck.com/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Sirio.online",
+      "url": "https://sirio.online/",
+      "category": "Inspiration",
+      "file": "app/resources.ts",
+      "resolved": "https://sirio.online/",
+      "requestedUrl": "https://sirio.online/",
+      "finalUrl": null,
+      "status": null,
+      "ok": false,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Tabbied Patterns",
+      "url": "https://tabbied.com/patterns/",
+      "category": "Colors & Backgrounds",
+      "file": "app/resources.ts",
+      "resolved": "https://tabbied.com/patterns/",
+      "requestedUrl": "https://tabbied.com/patterns/",
+      "finalUrl": "https://tabbied.com/patterns/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Unreal Engine",
+      "url": "https://www.unrealengine.com/",
+      "category": "3D & Motion",
+      "file": "app/resources.ts",
+      "resolved": "https://www.unrealengine.com/",
+      "requestedUrl": "https://www.unrealengine.com/",
+      "finalUrl": "https://www.unrealengine.com/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Wireframe Designer",
+      "url": "https://www.figma.com/community/search?query=Wireframe%20Designer&resource_type=plugins",
+      "category": "Figma Plugins",
+      "file": "app/resources.ts",
+      "resolved": "https://www.figma.com/community/search?query=Wireframe%20Designer&resource_type=plugins",
+      "requestedUrl": "https://www.figma.com/community/search?query=Wireframe%20Designer&resource_type=plugins",
+      "finalUrl": "https://www.figma.com/community/search?query=Wireframe%20Designer&resource_type=plugins",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "Motion Primitives",
+      "url": "https://motion-primitives.com/",
+      "category": "Motion & Interaction",
+      "file": "app/motionResources.ts",
+      "resolved": "https://motion-primitives.com/",
+      "requestedUrl": "https://motion-primitives.com/",
+      "finalUrl": "https://motion-primitives.com/",
+      "status": 429,
+      "ok": false
+    },
+    {
+      "name": "Cult UI",
+      "url": "https://www.cult-ui.com/",
+      "category": "UI Component Libraries",
+      "file": "app/uiLibraries.ts",
+      "resolved": "https://www.cult-ui.com/",
+      "requestedUrl": "https://www.cult-ui.com/",
+      "finalUrl": "https://www.cult-ui.com/",
+      "status": 429,
+      "ok": false
+    },
+    {
+      "name": "HyperUI",
+      "url": "https://www.hyperui.dev/",
+      "category": "UI Component Libraries",
+      "file": "app/uiLibraries.ts",
+      "resolved": "https://www.hyperui.dev/",
+      "requestedUrl": "https://www.hyperui.dev/",
+      "finalUrl": "https://www.hyperui.dev/",
+      "status": 403,
+      "ok": false
+    },
+    {
+      "name": "FlyonUI",
+      "url": "https://flyonui.com/",
+      "category": "UI Component Libraries",
+      "file": "app/uiLibraries.ts",
+      "resolved": "https://flyonui.com/",
+      "requestedUrl": "https://flyonui.com/",
+      "finalUrl": null,
+      "status": null,
+      "ok": false,
+      "error": "fetch failed"
+    }
+  ],
+  "redirected": [
+    {
+      "name": "Adobe Background Remover",
+      "url": "https://www.adobe.com/express/feature/image/remove-background",
+      "category": "AI",
+      "file": "app/resources.ts",
+      "resolved": "https://www.adobe.com/express/feature/image/remove-background",
+      "requestedUrl": "https://www.adobe.com/express/feature/image/remove-background",
+      "finalUrl": "https://www.adobe.com/products/firefly/features/remove-background.html",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "category": "AI",
+      "file": "app/resources.ts",
+      "resolved": "https://www.anthropic.com/claude-code",
+      "requestedUrl": "https://www.anthropic.com/claude-code",
+      "finalUrl": "https://claude.com/product/claude-code",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Google ImageFX",
+      "url": "https://labs.google/fx/tools/image-fx",
+      "category": "AI",
+      "file": "app/resources.ts",
+      "resolved": "https://labs.google/fx/tools/image-fx",
+      "requestedUrl": "https://labs.google/fx/tools/image-fx",
+      "finalUrl": "https://flow.google.com/?from=imagefx",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Kive AI",
+      "url": "https://www.kive.ai/",
+      "category": "AI",
+      "file": "app/resources.ts",
+      "resolved": "https://www.kive.ai/",
+      "requestedUrl": "https://www.kive.ai/",
+      "finalUrl": "https://kive.ai/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Kling AI",
+      "url": "https://klingai.com/",
+      "category": "AI",
+      "file": "app/resources.ts",
+      "resolved": "https://klingai.com/",
+      "requestedUrl": "https://klingai.com/",
+      "finalUrl": "https://kling.ai/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Magnific AI",
+      "url": "https://magnific.ai/",
+      "category": "AI",
+      "file": "app/resources.ts",
+      "resolved": "https://magnific.ai/",
+      "requestedUrl": "https://magnific.ai/",
+      "finalUrl": "https://www.magnific.com/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Runway",
+      "url": "https://runwayml.com/",
+      "category": "AI",
+      "file": "app/resources.ts",
+      "resolved": "https://runwayml.com/",
+      "requestedUrl": "https://runwayml.com/",
+      "finalUrl": "https://runway.com/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Freepik",
+      "url": "https://www.freepik.com/",
+      "category": "Branding",
+      "file": "app/resources.ts",
+      "resolved": "https://www.freepik.com/",
+      "requestedUrl": "https://www.freepik.com/",
+      "finalUrl": "https://www.magnific.com/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Framer Community Gallery",
+      "url": "https://www.framer.com/community/",
+      "category": "Inspiration",
+      "file": "app/resources.ts",
+      "resolved": "https://www.framer.com/community/",
+      "requestedUrl": "https://www.framer.com/community/",
+      "finalUrl": "https://www.framer.com/marketplace/templates/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Framer Gallery",
+      "url": "https://www.framer.com/gallery/",
+      "category": "Inspiration",
+      "file": "app/resources.ts",
+      "resolved": "https://www.framer.com/gallery/",
+      "requestedUrl": "https://www.framer.com/gallery/",
+      "finalUrl": "https://www.framer.com/community/gallery/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Good Design Tools",
+      "url": "https://gooddesign.tools/",
+      "category": "Inspiration",
+      "file": "app/resources.ts",
+      "resolved": "https://gooddesign.tools/",
+      "requestedUrl": "https://gooddesign.tools/",
+      "finalUrl": "https://www.gooddesign.tools/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Layers",
+      "url": "https://layers.to/",
+      "category": "Inspiration",
+      "file": "app/resources.ts",
+      "resolved": "https://layers.to/",
+      "requestedUrl": "https://layers.to/",
+      "finalUrl": "https://layers.to/explore",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Savee",
+      "url": "https://savee.it/",
+      "category": "Inspiration",
+      "file": "app/resources.ts",
+      "resolved": "https://savee.it/",
+      "requestedUrl": "https://savee.it/",
+      "finalUrl": "https://savee.com/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "FontPair",
+      "url": "https://www.fontpair.co/",
+      "category": "Resources",
+      "file": "app/resources.ts",
+      "resolved": "https://www.fontpair.co/",
+      "requestedUrl": "https://www.fontpair.co/",
+      "finalUrl": "https://fontpair.co/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "ShapeFest",
+      "url": "https://www.shapefest.com/",
+      "category": "Resources",
+      "file": "app/resources.ts",
+      "resolved": "https://www.shapefest.com/",
+      "requestedUrl": "https://www.shapefest.com/",
+      "finalUrl": "https://shapefest.com/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Toolfolio",
+      "url": "https://toolfolio.io/",
+      "category": "Resources",
+      "file": "app/resources.ts",
+      "resolved": "https://toolfolio.io/",
+      "requestedUrl": "https://toolfolio.io/",
+      "finalUrl": "https://toolfolio.com/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Google reCAPTCHA",
+      "url": "https://www.google.com/recaptcha/about/",
+      "category": "Web Development",
+      "file": "app/resources.ts",
+      "resolved": "https://www.google.com/recaptcha/about/",
+      "requestedUrl": "https://www.google.com/recaptcha/about/",
+      "finalUrl": "https://cloud.google.com/security/products/recaptcha",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Neumorphism.io",
+      "url": "https://neumorphism.io/#e0e0e0",
+      "category": "Web Development",
+      "file": "app/resources.ts",
+      "resolved": "https://neumorphism.io/#e0e0e0",
+      "requestedUrl": "https://neumorphism.io/#e0e0e0",
+      "finalUrl": "https://neumorphism.io/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Colir Space",
+      "url": "https://colir.space/app",
+      "category": "Colors & Backgrounds",
+      "file": "app/resources.ts",
+      "resolved": "https://colir.space/app",
+      "requestedUrl": "https://colir.space/app",
+      "finalUrl": "http://colir.space/app/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Figma MCP Server",
+      "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server",
+      "category": "AI Skills",
+      "file": "app/resources.ts",
+      "resolved": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server",
+      "requestedUrl": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server",
+      "finalUrl": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Ramps",
+      "url": "https://ramps.studio/",
+      "category": "Colors & Backgrounds",
+      "file": "app/resources.ts",
+      "resolved": "https://ramps.studio/",
+      "requestedUrl": "https://ramps.studio/",
+      "finalUrl": "https://www.ramps.studio/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "name": "Tailwind Plus Templates",
+      "url": "https://tailwindcss.com/plus/templates",
+      "category": "Design Libraries",
+      "file": "app/resources.ts",
+      "resolved": "https://tailwindcss.com/plus/templates",
+      "requestedUrl": "https://tailwindcss.com/plus/templates",
+      "finalUrl": "https://tailwindcss.com/plus/login",
+      "status": 200,
+      "ok": true
+    }
+  ]
+}
