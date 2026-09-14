@@ -1,5 +1,4 @@
 import type { Resource } from "./resources";
-
 export const uiLibraries: Resource[] = [
   {
     id: 301,

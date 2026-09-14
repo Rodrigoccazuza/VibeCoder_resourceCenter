@@ -1,79 +1,8 @@
 {
-  "generatedAt": "2026-09-14T03:59:11.290Z",
-  "totalCards": 247,
-  "testedLinks": 233,
-  "unresolved": [
-    {
-      "name": "Film AI",
-      "category": "AI",
-      "file": "app/resources.ts"
-    },
-    {
-      "name": "Better Logo Figma Plugin",
-      "category": "Figma",
-      "file": "app/resources.ts"
-    },
-    {
-      "name": "Real People Figma Plugin",
-      "category": "Figma",
-      "file": "app/resources.ts"
-    },
-    {
-      "name": "WebP Exporter Figma Plugin",
-      "category": "Figma",
-      "file": "app/resources.ts"
-    },
-    {
-      "name": "Cherryp",
-      "category": "Inspiration",
-      "file": "app/resources.ts"
-    },
-    {
-      "name": "Super Hero",
-      "category": "Inspiration",
-      "file": "app/resources.ts"
-    },
-    {
-      "name": "Halo UI/UX",
-      "category": "Resources",
-      "file": "app/resources.ts"
-    },
-    {
-      "name": "Icon Hunt",
-      "category": "Resources",
-      "file": "app/resources.ts"
-    },
-    {
-      "name": "CSS Packer",
-      "category": "Web Development",
-      "file": "app/resources.ts"
-    },
-    {
-      "name": "Export SVG Extension",
-      "category": "Web Development",
-      "file": "app/resources.ts"
-    },
-    {
-      "name": "Agent Skills Pack",
-      "category": "AI Skills",
-      "file": "app/resources.ts"
-    },
-    {
-      "name": "Graphify",
-      "category": "AI Skills",
-      "file": "app/resources.ts"
-    },
-    {
-      "name": "Liquid Logo",
-      "category": "GitHub Repositories",
-      "file": "app/resources.ts"
-    },
-    {
-      "name": "LiquidGlass.js",
-      "category": "GitHub Repositories",
-      "file": "app/resources.ts"
-    }
-  ],
+  "generatedAt": "2026-09-14T04:01:29.389Z",
+  "totalCards": 241,
+  "testedLinks": 241,
+  "unresolved": [],
   "broken": [],
   "blocked": [
     {
@@ -283,6 +212,31 @@
       "blocked": true
     },
     {
+      "name": "WebP Exporter Figma Plugin",
+      "url": "https://www.figma.com/community/plugin/1181873200384736932",
+      "category": "Figma",
+      "file": "app/resources.ts",
+      "resolved": "https://www.figma.com/community/plugin/1181873200384736932",
+      "requestedUrl": "https://www.figma.com/community/plugin/1181873200384736932",
+      "finalUrl": "https://www.figma.com/community/plugin/1181873200384736932",
+      "status": 403,
+      "ok": true,
+      "blocked": true
+    },
+    {
+      "name": "Framer Community Gallery",
+      "url": "https://www.framer.com/community/",
+      "category": "Inspiration",
+      "file": "app/resources.ts",
+      "resolved": "https://www.framer.com/community/",
+      "requestedUrl": "https://www.framer.com/community/",
+      "finalUrl": null,
+      "status": null,
+      "ok": true,
+      "blocked": true,
+      "error": "This operation was aborted"
+    },
+    {
       "name": "Land Book",
       "url": "https://land-book.com/",
       "category": "Inspiration",
@@ -474,6 +428,18 @@
       "resolved": "https://milled.com/",
       "requestedUrl": "https://milled.com/",
       "finalUrl": "https://milled.com/",
+      "status": 403,
+      "ok": true,
+      "blocked": true
+    },
+    {
+      "name": "Line Awesome",
+      "url": "https://icons8.com/line-awesome",
+      "category": "Icon Libraries",
+      "file": "app/resources.ts",
+      "resolved": "https://icons8.com/line-awesome",
+      "requestedUrl": "https://icons8.com/line-awesome",
+      "finalUrl": "https://icons8.com/line-awesome",
       "status": 403,
       "ok": true,
       "blocked": true
@@ -748,18 +714,6 @@
       "blocked": false
     },
     {
-      "name": "Framer Community Gallery",
-      "url": "https://www.framer.com/community/",
-      "category": "Inspiration",
-      "file": "app/resources.ts",
-      "resolved": "https://www.framer.com/community/",
-      "requestedUrl": "https://www.framer.com/community/",
-      "finalUrl": "https://www.framer.com/marketplace/templates/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
       "name": "Framer Gallery",
       "url": "https://www.framer.com/gallery/",
       "category": "Inspiration",
@@ -915,5 +869,13 @@
       "ok": true,
       "blocked": false
     }
+  ],
+  "removedUnverifiedLegacyEntries": [
+    "Film AI",
+    "Real People Figma Plugin",
+    "Cherryp",
+    "Super Hero",
+    "Icon Hunt",
+    "CSS Packer"
   ]
 }

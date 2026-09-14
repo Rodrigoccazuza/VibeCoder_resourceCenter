@@ -11,7 +11,6 @@ export type Resource = {
   access: string;
   keywords: string;
 };
-
 export const resources: Resource[] = [
   {
     "id": 1,
@@ -77,19 +76,6 @@ export const resources: Resource[] = [
     "audience": "Developer",
     "access": "Unknown",
     "keywords": "ai coding, gpt, automation, developer tools"
-  },
-  {
-    "id": 6,
-    "name": "Film AI",
-    "type": "Tool",
-    "url": null,
-    "platform": "Film AI",
-    "category": "AI",
-    "description": "AI resource for generating film-style effects and visual scenes.",
-    "bestFor": "Use this resource for aI resource for generating film-style effects and visual scenes.",
-    "audience": "Designer",
-    "access": "Unknown",
-    "keywords": "ai, design resource, tool"
   },
   {
     "id": 7,
@@ -355,7 +341,7 @@ export const resources: Resource[] = [
     "id": 27,
     "name": "Better Logo Figma Plugin",
     "type": "Tool",
-    "url": null,
+    "url": "https://better-logo.com/",
     "platform": "Better Logo Figma Plugin",
     "category": "Figma",
     "description": "Figma plugin referenced for improving or generating logo assets.",
@@ -560,19 +546,6 @@ export const resources: Resource[] = [
     "keywords": "figma, design resource, tool"
   },
   {
-    "id": 43,
-    "name": "Real People Figma Plugin",
-    "type": "Tool",
-    "url": null,
-    "platform": "Real People Figma Plugin",
-    "category": "Figma",
-    "description": "Figma placeholder plugin for adding realistic people and content to interface designs.",
-    "bestFor": "Use this resource for figma placeholder plugin for adding realistic people and content to interface designs.",
-    "audience": "Designer",
-    "access": "Unknown",
-    "keywords": "figma, design resource, tool"
-  },
-  {
     "id": 44,
     "name": "SegmentUI",
     "type": "Template",
@@ -615,7 +588,7 @@ export const resources: Resource[] = [
     "id": 47,
     "name": "WebP Exporter Figma Plugin",
     "type": "Tool",
-    "url": null,
+    "url": "https://www.figma.com/community/plugin/1181873200384736932",
     "platform": "WebP Exporter Figma Plugin",
     "category": "Figma",
     "description": "Figma exporter for producing lightweight WebP images for better website performance.",
@@ -672,19 +645,6 @@ export const resources: Resource[] = [
     "category": "Inspiration",
     "description": "Landing-page builder and collection for quick website creation.",
     "bestFor": "Use this resource for landing-page builder and collection for quick website creation.",
-    "audience": "Designer",
-    "access": "Unknown",
-    "keywords": "inspiration, design resource, website"
-  },
-  {
-    "id": 52,
-    "name": "Cherryp",
-    "type": "Website",
-    "url": null,
-    "platform": "Cherryp",
-    "category": "Inspiration",
-    "description": "Curated source of design inspiration.",
-    "bestFor": "Use this resource for curated source of design inspiration.",
     "audience": "Designer",
     "access": "Unknown",
     "keywords": "inspiration, design resource, website"
@@ -971,19 +931,6 @@ export const resources: Resource[] = [
     "category": "Inspiration",
     "description": "Curated collection of digital-design screenshots and references.",
     "bestFor": "Use this resource for curated collection of digital-design screenshots and references.",
-    "audience": "Designer",
-    "access": "Unknown",
-    "keywords": "inspiration, design resource, website"
-  },
-  {
-    "id": 75,
-    "name": "Super Hero",
-    "type": "Website",
-    "url": null,
-    "platform": "Super Hero",
-    "category": "Inspiration",
-    "description": "Website hero-section inspiration library.",
-    "bestFor": "Use this resource for website hero-section inspiration library.",
     "audience": "Designer",
     "access": "Unknown",
     "keywords": "inspiration, design resource, website"
@@ -1330,7 +1277,7 @@ export const resources: Resource[] = [
     "id": 102,
     "name": "Halo UI/UX",
     "type": "Website",
-    "url": null,
+    "url": "https://dribbble.com/haloweb/about",
     "platform": "Halo UI/UX",
     "category": "Resources",
     "description": "UI and UX resource collection shown in the resource bank.",
@@ -1361,19 +1308,6 @@ export const resources: Resource[] = [
     "category": "Resources",
     "description": "Mix-and-match illustration library of people and scenes.",
     "bestFor": "Use this resource for mix-and-match illustration library of people and scenes.",
-    "audience": "Designer",
-    "access": "Unknown",
-    "keywords": "resources, design resource, website"
-  },
-  {
-    "id": 105,
-    "name": "Icon Hunt",
-    "type": "Website",
-    "url": null,
-    "platform": "Icon Hunt",
-    "category": "Resources",
-    "description": "Search and discovery resource for icon collections.",
-    "bestFor": "Use this resource for search and discovery resource for icon collections.",
     "audience": "Designer",
     "access": "Unknown",
     "keywords": "resources, design resource, website"
@@ -1756,23 +1690,10 @@ export const resources: Resource[] = [
     "keywords": "web development, design resource, tool"
   },
   {
-    "id": 135,
-    "name": "CSS Packer",
-    "type": "Tool",
-    "url": null,
-    "platform": "CSS Packer",
-    "category": "Web Development",
-    "description": "Browser utility referenced for compressing or packing CSS.",
-    "bestFor": "Use this resource for browser utility referenced for compressing or packing CSS.",
-    "audience": "Developer",
-    "access": "Unknown",
-    "keywords": "web development, design resource, tool"
-  },
-  {
     "id": 136,
     "name": "Export SVG Extension",
     "type": "Tool",
-    "url": null,
+    "url": "https://github.com/martingraham/svgExport",
     "platform": "Export SVG Extension",
     "category": "Web Development",
     "description": "Browser extension referenced for exporting SVG assets from webpages.",
@@ -2214,7 +2135,7 @@ export const resources: Resource[] = [
     "id": 170,
     "name": "Agent Skills Pack",
     "type": "AI Skill",
-    "url": null,
+    "url": "https://github.com/killerfirst/agent-skills-pack",
     "platform": "Unverified source",
     "category": "AI Skills",
     "description": "A claimed multi-skill package for planning, coding, testing, and publishing with coding agents.",
@@ -2396,7 +2317,7 @@ export const resources: Resource[] = [
     "id": 184,
     "name": "Graphify",
     "type": "AI Skill",
-    "url": null,
+    "url": "https://github.com/Graphify-Labs/graphify",
     "platform": "Unverified source",
     "category": "AI Skills",
     "description": "A claimed workflow for turning a codebase into a knowledge graph for agent context.",
@@ -2448,7 +2369,7 @@ export const resources: Resource[] = [
     "id": 188,
     "name": "Liquid Logo",
     "type": "GitHub Repository",
-    "url": null,
+    "url": "https://github.com/collidingScopes/liquid-logo",
     "platform": "Unverified source",
     "category": "GitHub Repositories",
     "description": "Repository referenced for applying liquid-metal or chrome treatments to logos and text.",
@@ -2461,7 +2382,7 @@ export const resources: Resource[] = [
     "id": 189,
     "name": "LiquidGlass.js",
     "type": "GitHub Repository",
-    "url": null,
+    "url": "https://github.com/Mael-667/Liquid-Glass-CSS",
     "platform": "Unverified source",
     "category": "GitHub Repositories",
     "description": "Repository referenced for implementing configurable liquid-glass interface effects.",
