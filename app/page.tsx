@@ -145,7 +145,11 @@ const resourceCatalog: Resource[] = [
   ...uiLibraries,
 ];
 
-const categories = Object.keys(CATEGORY_META);
+const categories = [
+  "Motion & Interaction",
+  "UI Component Libraries",
+  ...Object.keys(CATEGORY_META).filter((item) => item !== "Motion & Interaction" && item !== "UI Component Libraries"),
+];
 const types = [...new Set(resourceCatalog.map((resource) => resource.type))].sort();
 const platforms = [...new Set(resourceCatalog.map((resource) => resource.platform))].sort();
 const FEATURED_COLLECTIONS = ["UI Component Libraries", "Motion & Interaction", "GitHub Repositories", "Figma Plugins", "AI Skills", "3D & Motion", "Design Libraries"];
