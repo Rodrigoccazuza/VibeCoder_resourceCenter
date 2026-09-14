@@ -13,6 +13,7 @@ const canonicalReplacements = new Map([
 ]);
 
 const verifiedOverrides = new Map([
+  ['Better Logo Figma Plugin', 'https://better-logo.com/'],
   ['Content Reel', 'https://www.figma.com/community/plugin/731627216655469013/content-reel'],
   ['Contrast Figma Plugin', 'https://www.figma.com/community/plugin/748533339900865323'],
   ['Design Documentation Figma Plugin', 'https://www.figma.com/solutions/ai-design-documentation-generator/'],
@@ -27,6 +28,7 @@ const verifiedOverrides = new Map([
   ['Perspective Toolkit Figma Plugin', 'https://www.figma.com/community/plugin/862059663689780943/perspective-toolkit'],
   ['Pitchdeck Figma Plugin', 'https://www.figma.com/community/plugin/838925615018625519/pitchdeck-presentation-studio'],
   ['Vectorize Figma Plugin', 'https://www.figma.com/solutions/vectorize-image/'],
+  ['WebP Exporter Figma Plugin', 'https://www.figma.com/community/plugin/1181873200384736932'],
   ['App Shots', 'https://appshots.design/'],
   ['btw Landing Pages', 'https://www.btw.so/marketing/landing-page-examples'],
   ['Pafolios', 'https://pafolios.com/'],
@@ -35,11 +37,28 @@ const verifiedOverrides = new Map([
   ['Design Systems Brasileiros', 'https://designsystemsbrasileiros.com/'],
   ['Design Systems for Figma', 'https://www.designsystemsforfigma.com/'],
   ['Free Illustrations', 'https://getillustrations.com/free-illustrations'],
+  ['Halo UI/UX', 'https://dribbble.com/haloweb/about'],
   ['Handz', 'https://www.handz.design/'],
   ['Noise & Gradient', 'https://www.noiseandgradient.com/'],
   ['UX Challenges', 'https://uxchallenge.com/'],
   ['Boosters', 'https://www.flowbase.co/'],
   ['Flowbase', 'https://www.flowbase.co/'],
+  ['Export SVG Extension', 'https://github.com/martingraham/svgExport'],
+  ['Agent Skills Pack', 'https://github.com/killerfirst/agent-skills-pack'],
+  ['Graphify', 'https://github.com/Graphify-Labs/graphify'],
+  ['Liquid Logo', 'https://github.com/collidingScopes/liquid-logo'],
+  ['LiquidGlass.js', 'https://github.com/Mael-667/Liquid-Glass-CSS'],
+]);
+
+// These legacy labels cannot be mapped to one unique, verifiable official project.
+// Removing them is safer than sending users to a search page or a guessed destination.
+const unverifiedLegacyEntries = new Set([
+  'Film AI',
+  'Real People Figma Plugin',
+  'Cherryp',
+  'Super Hero',
+  'Icon Hunt',
+  'CSS Packer',
 ]);
 
 function extractKnownLinks(source) {
@@ -63,6 +82,12 @@ function normalizeFileContent(source, knownLinks) {
     if (!direct) return block;
     return block.replace(/((?:"url"|url):\s*)null/, `$1"${direct}"`);
   });
+  source = source.replace(/\n  \{[\s\S]*?\n  \},?/g, (block) => {
+    const name = block.match(/"name":\s*"([^"]+)"/)?.[1];
+    if (name && unverifiedLegacyEntries.has(name)) return '';
+    return block;
+  });
+  source = source.replace(/\n\s*\n/g, '\n');
   return source;
 }
 
@@ -119,9 +144,9 @@ const checked = await pool(testable, 30, (item) => checkUrl(item, item.resolved)
 const broken = checked.filter((r) => !r.ok);
 const blocked = checked.filter((r) => r.blocked);
 const redirected = checked.filter((r) => r.ok && !r.blocked && r.finalUrl && r.finalUrl !== r.requestedUrl);
-const report = { generatedAt: new Date().toISOString(), totalCards: resources.length, testedLinks: checked.length, unresolved: unresolved.map(({ name, category, file }) => ({ name, category, file })), broken, blocked, redirected };
+const report = { generatedAt: new Date().toISOString(), totalCards: resources.length, testedLinks: checked.length, unresolved: unresolved.map(({ name, category, file }) => ({ name, category, file })), broken, blocked, redirected, removedUnverifiedLegacyEntries: [...unverifiedLegacyEntries] };
 await fs.writeFile('link-audit-report.json', JSON.stringify(report, null, 2) + '\n');
 console.log(`LINK_AUDIT total=${report.totalCards} tested=${report.testedLinks} unresolved=${report.unresolved.length} broken=${report.broken.length} blocked=${report.blocked.length} redirected=${report.redirected.length}`);
 if (unresolved.length) { console.log('UNRESOLVED CARDS'); for (const item of unresolved) console.log(`- ${item.name} [${item.category}]`); }
 if (broken.length) { console.log('BROKEN LINKS'); for (const item of broken) console.log(`- ${item.name}: ${item.requestedUrl} status=${item.status ?? 'ERR'}`); }
-if (broken.length) process.exitCode = 2;
+if (unresolved.length || broken.length) process.exitCode = 2;
