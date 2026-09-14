@@ -83,7 +83,7 @@ export const motionResources: Resource[] = [
     id: 221,
     name: "Osmo",
     type: "Library",
-    url: "https://osmo.supply/",
+    url: "https://www.osmo.supply/",
     platform: "Osmo",
     category: "Motion & Interaction",
     description: "Creative-development resource library focused on reusable website interactions, animation techniques, components, and high-quality front-end patterns.",
