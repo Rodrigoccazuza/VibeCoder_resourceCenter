@@ -53,7 +53,7 @@ function extractResources(source, file) {
 
 async function checkUrl(item, url) {
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 15000);
+  const timer = setTimeout(() => controller.abort(), 5000);
   try {
     const res = await fetch(url, {
       method: 'GET',
@@ -109,7 +109,7 @@ for (const item of resources) {
   testable.push({ ...item, resolved });
 }
 
-const checked = await pool(testable, 8, (item) => checkUrl(item, item.resolved));
+const checked = await pool(testable, 30, (item) => checkUrl(item, item.resolved));
 const broken = checked.filter((r) => !r.ok);
 const redirected = checked.filter((r) => r.ok && r.finalUrl && r.finalUrl !== r.requestedUrl);
 
