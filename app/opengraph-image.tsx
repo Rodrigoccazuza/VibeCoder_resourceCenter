@@ -3,6 +3,7 @@ import { ImageResponse } from "next/og";
 export const alt = "VibeCoder Resource Center interface preview";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+export const dynamic = "force-static";
 
 export default function Image() {
   const nav = [
@@ -36,7 +37,7 @@ export default function Image() {
       <div style={{ flex: 1, display: "flex", flexDirection: "column", paddingLeft: 24 }}>
         <div style={{ height: 58, display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
           <div style={{ width: 520, height: 46, border: "1px solid #262626", borderRadius: 24, background: "#0d0d0d", display: "flex", alignItems: "center", padding: "0 18px", color: "#8f8f98", fontSize: 14 }}>⌕ &nbsp; Search tools, topics or use cases…</div>
-          <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}><b style={{ fontSize: 22 }}>241</b><span style={{ color: "#8f8f98", fontSize: 11 }}>curated resources</span></div>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}><b style={{ fontSize: 22 }}>251</b><span style={{ color: "#8f8f98", fontSize: 11 }}>curated resources</span></div>
         </div>
 
         <div style={{ border: "1px solid #262626", borderRadius: 24, background: "linear-gradient(120deg,#0d0d0d 0%,#151018 56%,#6026EC 145%)", padding: 30, minHeight: 210, display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
@@ -48,8 +49,8 @@ export default function Image() {
           <div style={{ background: "#6026EC", borderRadius: 999, padding: "13px 18px", fontSize: 13, fontWeight: 700 }}>Browse library →</div>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginTop: 18 }}>
-          {cards.map(([name, desc]) => <div key={name} style={{ border: "1px solid #252525", borderRadius: 16, background: "#0d0d0d", padding: 16, minHeight: 118, display: "flex", flexDirection: "column", justifyContent: "space-between" }}><div style={{ width: 38, height: 38, borderRadius: 10, background: "#1a1a1a", color: "#9b5cff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800 }}>{name.slice(0,2).toUpperCase()}</div><div><b style={{ fontSize: 15 }}>{name}</b><div style={{ color: "#9f9fa7", fontSize: 11, marginTop: 4 }}>{desc}</div></div></div>)}
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 18 }}>
+          {cards.map(([name, desc]) => <div key={name} style={{ width: "31.9%", border: "1px solid #252525", borderRadius: 16, background: "#0d0d0d", padding: 16, minHeight: 118, display: "flex", flexDirection: "column", justifyContent: "space-between" }}><div style={{ width: 38, height: 38, borderRadius: 10, background: "#1a1a1a", color: "#9b5cff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800 }}>{name.slice(0,2).toUpperCase()}</div><div style={{ display: "flex", flexDirection: "column" }}><b style={{ fontSize: 15 }}>{name}</b><div style={{ color: "#9f9fa7", fontSize: 11, marginTop: 4 }}>{desc}</div></div></div>)}
         </div>
       </div>
     </div>,
