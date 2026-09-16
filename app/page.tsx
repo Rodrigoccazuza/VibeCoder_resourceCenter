@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { resources, type Resource } from "./resources";
 import { motionResources } from "./motionResources";
 import { uiLibraries } from "./uiLibraries";
+import { notionResources } from "./notionResources";
 
 const KNOWN_LINKS: Record<string, string> = {
   "Adobe Background Remover": "https://www.adobe.com/express/feature/image/remove-background",
@@ -102,7 +103,7 @@ const KNOWN_LINKS: Record<string, string> = {
   WhatFont: "https://whatfonttool.com/",
   Framer: "https://www.framer.com/",
   "Google reCAPTCHA": "https://www.google.com/recaptcha/about/",
-  "Image-to-ThreeJS": "https://github.com/search?q=image+to+threejs&type=repositories",
+  "Image-to-ThreeJS": "https://github.com/img2threejs/img2threejs",
   TweakCN: "https://tweakcn.com/",
   Vite: "https://vite.dev/",
   Wappalyzer: "https://www.wappalyzer.com/",
@@ -135,20 +136,24 @@ const CATEGORY_META: Record<string, { code: string; copy: string }> = {
 
 const MOTION_RECLASSIFICATIONS = new Set(["React Bits", "Three UI"]);
 const UI_LIBRARY_RECLASSIFICATIONS = new Set(["21st.dev", "Canvas UI", "OriginKit", "shadcn/ui"]);
+const TYPOGRAPHY_RECLASSIFICATIONS = new Set(["Adobe Fonts", "FontPair", "Fontshare", "Type Scale", "Typewolf", "WhatFontIs"]);
 const resourceCatalog: Resource[] = [
   ...resources.map((resource) => {
     if (MOTION_RECLASSIFICATIONS.has(resource.name)) return { ...resource, category: "Motion & Interaction" };
     if (UI_LIBRARY_RECLASSIFICATIONS.has(resource.name)) return { ...resource, category: "UI Component Libraries" };
+    if (TYPOGRAPHY_RECLASSIFICATIONS.has(resource.name)) return { ...resource, category: "Typography" };
     return resource;
   }),
   ...motionResources,
   ...uiLibraries,
+  ...notionResources,
 ];
 
+const PINNED_CATEGORIES = ["Motion & Interaction", "UI Component Libraries"];
+const catalogCategories = [...new Set(resourceCatalog.map((resource) => resource.category))];
 const categories = [
-  "Motion & Interaction",
-  "UI Component Libraries",
-  ...Object.keys(CATEGORY_META).filter((item) => item !== "Motion & Interaction" && item !== "UI Component Libraries"),
+  ...PINNED_CATEGORIES.filter((item) => catalogCategories.includes(item)),
+  ...catalogCategories.filter((item) => !PINNED_CATEGORIES.includes(item)).sort(),
 ];
 const types = [...new Set(resourceCatalog.map((resource) => resource.type))].sort();
 const platforms = [...new Set(resourceCatalog.map((resource) => resource.platform))].sort();
@@ -157,16 +162,7 @@ const FEATURED_COLLECTIONS = ["UI Component Libraries", "Motion & Interaction", 
 function getLink(resource: Resource) {
   const known = resource.url || KNOWN_LINKS[resource.name];
   if (known) return { href: known, verified: true };
-  if (resource.category === "Figma" || resource.category === "Figma Plugins") {
-    return {
-      href: `https://www.figma.com/community/search?query=${encodeURIComponent(resource.name)}`,
-      verified: false,
-    };
-  }
-  return {
-    href: `https://www.google.com/search?q=${encodeURIComponent(`${resource.name} ${resource.platform} official`)}`,
-    verified: false,
-  };
+  return { href: "#", verified: false };
 }
 
 function getDomain(resource: Resource) {
@@ -174,6 +170,58 @@ function getDomain(resource: Resource) {
   if (!verified) return "Official link lookup";
   try { return new URL(href).hostname.replace("www.", ""); }
   catch { return resource.platform; }
+}
+
+function getPreviewUrl(url: string) {
+  if (!url || url === "#") return "";
+  return `https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=800&h=450`;
+}
+
+const SEARCH_SYNONYMS: Record<string, string[]> = {
+  font: ["fonts", "typography", "typeface", "typefaces", "type scale"],
+  fonts: ["font", "typography", "typeface", "typefaces", "type scale"],
+  fontes: ["font", "fonts", "typography", "typeface"],
+  icon: ["icons", "symbol", "symbols", "glyph"],
+  icons: ["icon", "symbol", "symbols", "glyph"],
+  icones: ["icon", "icons", "symbols"],
+  animation: ["motion", "interaction", "microinteraction", "transition"],
+  animations: ["motion", "interaction", "microinteractions", "transitions"],
+  animacao: ["animation", "motion", "interaction"],
+  color: ["colors", "colour", "palette", "gradient"],
+  colors: ["color", "colour", "palette", "gradients"],
+  cores: ["color", "colors", "palette", "gradient"],
+  inspiration: ["reference", "references", "gallery", "showcase"],
+  inspiracao: ["inspiration", "reference", "gallery"],
+  plugin: ["plugins", "extension", "extensions"],
+  plugins: ["plugin", "extension", "extensions"],
+  template: ["templates", "starter", "boilerplate"],
+  templates: ["template", "starter", "boilerplate"],
+};
+
+function normalizeSearch(value: string) {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
+function matchesSearch(resource: Resource, query: string) {
+  const normalized = normalizeSearch(query).trim();
+  if (!normalized) return true;
+  const domain = resource.url ? (() => { try { return new URL(resource.url).hostname; } catch { return ""; } })() : "";
+  const haystack = normalizeSearch([
+    resource.name,
+    resource.description,
+    resource.bestFor,
+    resource.platform,
+    resource.category,
+    resource.type,
+    resource.audience,
+    resource.access,
+    resource.keywords,
+    domain,
+  ].join(" "));
+  return normalized.split(/\s+/).every((token) => {
+    const alternatives = [token, ...(SEARCH_SYNONYMS[token] || [])].map(normalizeSearch);
+    return alternatives.some((candidate) => haystack.includes(candidate));
+  });
 }
 
 function Icon({ name }: { name: "search" | "arrow" | "grid" | "spark" | "close" | "menu" }) {
@@ -198,10 +246,8 @@ export default function Home() {
   const [mobileNav, setMobileNav] = useState(false);
 
   const filtered = useMemo(() => {
-    const normalized = query.trim().toLowerCase();
     return resourceCatalog.filter((resource) => {
-      const matchesQuery = !normalized || [resource.name, resource.description, resource.bestFor, resource.platform, resource.keywords].join(" ").toLowerCase().includes(normalized);
-      return matchesQuery
+      return matchesSearch(resource, query)
         && (category === "All resources" || resource.category === category)
         && (type === "All types" || resource.type === type)
         && (access === "All access" || resource.access === access)
@@ -212,6 +258,14 @@ export default function Home() {
   const accessOptions = [...new Set(resourceCatalog.map((resource) => resource.access))].sort();
   const officialCount = resourceCatalog.filter((resource) => getLink(resource).verified).length;
   const selectCategory = (next: string) => { setCategory(next); setVisible(24); setMobileNav(false); };
+  const search = (value: string) => {
+    setQuery(value);
+    setCategory("All resources");
+    setType("All types");
+    setAccess("All access");
+    setPlatform("All platforms");
+    setVisible(24);
+  };
   const reset = () => { setQuery(""); setCategory("All resources"); setType("All types"); setAccess("All access"); setPlatform("All platforms"); setVisible(24); };
 
   return (
@@ -236,7 +290,7 @@ export default function Home() {
       <main className="main-content">
         <header className="topbar">
           <button className="mobile-menu" onClick={() => setMobileNav(true)} aria-label="Open category menu"><Icon name="menu" /></button>
-          <label className="search-field"><span className="sr-only">Search resources</span><Icon name="search" /><input value={query} onChange={(event) => { setQuery(event.target.value); setVisible(24); }} placeholder="Search tools, topics or use cases…" />{query && <button onClick={() => setQuery("")} aria-label="Clear search"><Icon name="close" /></button>}</label>
+          <label className="search-field"><span className="sr-only">Search resources</span><Icon name="search" /><input value={query} onChange={(event) => search(event.target.value)} placeholder="Search tools, topics or use cases…" />{query && <button onClick={() => search("")} aria-label="Clear search"><Icon name="close" /></button>}</label>
           <div className="topbar-count"><span>{resourceCatalog.length}</span><small>curated resources</small></div>
         </header>
 
@@ -278,6 +332,7 @@ export default function Home() {
               return (
                 <a className="resource-card" key={resource.id} href={link.href} target="_blank" rel="noreferrer" aria-label={`${resource.name}: ${link.verified ? "open official resource" : "find official resource"}`}>
                   <div className={`resource-cover category-${resource.category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}>
+                    {link.verified && <img className="resource-preview" src={getPreviewUrl(link.href)} alt="" loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={(event) => { event.currentTarget.style.display = "none"; }} />}
                     <span className="cover-grid" aria-hidden="true" /><span className="cover-code">{CATEGORY_META[resource.category]?.code || "RS"}</span><strong>{resource.name}</strong><small>{domain}</small><span className="cover-arrow"><Icon name="arrow" /></span>
                   </div>
                   <div className="resource-body">

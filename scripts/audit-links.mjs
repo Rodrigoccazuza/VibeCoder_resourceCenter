@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 
-const resourceFiles = ['app/resources.ts', 'app/motionResources.ts', 'app/uiLibraries.ts'];
+const resourceFiles = ['app/resources.ts', 'app/motionResources.ts', 'app/uiLibraries.ts', 'app/notionResources.ts'];
 const pagePath = 'app/page.tsx';
 
 const canonicalReplacements = new Map([
@@ -10,6 +10,10 @@ const canonicalReplacements = new Map([
   ['https://hover.dev/', 'https://www.hover.dev/'],
   ['https://animata.design/', 'https://www.animata.design/'],
   ['https://osmo.supply/', 'https://www.osmo.supply/'],
+  ['https://github.com/search?q=image+to+threejs&type=repositories', 'https://github.com/img2threejs/img2threejs'],
+  ['https://www.figma.com/community/search?query=Kigen&resource_type=plugins', 'https://www.figma.com/community/plugin/1499119094608975695/kigen-generate-design-system-variable-style-document'],
+  ['https://www.figma.com/community/search?query=Magnifier&resource_type=plugins', 'https://www.figma.com/community/plugin/1304128971729813386/magnifier'],
+  ['https://www.figma.com/community/search?query=Wireframe%20Designer&resource_type=plugins', 'https://www.figma.com/community/plugin/1228969298040149016/wireframe-designer'],
 ]);
 
 const verifiedOverrides = new Map([
@@ -142,11 +146,24 @@ for (const item of resources) {
 
 const checked = await pool(testable, 30, (item) => checkUrl(item, item.resolved));
 const broken = checked.filter((r) => !r.ok);
+const searchDestinations = checked.filter((r) => /(?:google\.com\/search|github\.com\/search|figma\.com\/community\/search)/i.test(r.requestedUrl));
 const blocked = checked.filter((r) => r.blocked);
 const redirected = checked.filter((r) => r.ok && !r.blocked && r.finalUrl && r.finalUrl !== r.requestedUrl);
-const report = { generatedAt: new Date().toISOString(), totalCards: resources.length, testedLinks: checked.length, unresolved: unresolved.map(({ name, category, file }) => ({ name, category, file })), broken, blocked, redirected, removedUnverifiedLegacyEntries: [...unverifiedLegacyEntries] };
+const report = {
+  generatedAt: new Date().toISOString(),
+  totalCards: resources.length,
+  testedLinks: checked.length,
+  unresolved: unresolved.map(({ name, category, file }) => ({ name, category, file })),
+  broken,
+  searchDestinations,
+  blockedCount: blocked.length,
+  blocked: blocked.map(({ name, requestedUrl }) => ({ name, requestedUrl })),
+  redirected,
+  removedUnverifiedLegacyEntries: [...unverifiedLegacyEntries],
+};
 await fs.writeFile('link-audit-report.json', JSON.stringify(report, null, 2) + '\n');
 console.log(`LINK_AUDIT total=${report.totalCards} tested=${report.testedLinks} unresolved=${report.unresolved.length} broken=${report.broken.length} blocked=${report.blocked.length} redirected=${report.redirected.length}`);
 if (unresolved.length) { console.log('UNRESOLVED CARDS'); for (const item of unresolved) console.log(`- ${item.name} [${item.category}]`); }
 if (broken.length) { console.log('BROKEN LINKS'); for (const item of broken) console.log(`- ${item.name}: ${item.requestedUrl} status=${item.status ?? 'ERR'}`); }
-if (unresolved.length || broken.length) process.exitCode = 2;
+if (searchDestinations.length) { console.log('SEARCH DESTINATIONS'); for (const item of searchDestinations) console.log(`- ${item.name}: ${item.requestedUrl}`); }
+if (unresolved.length || broken.length || searchDestinations.length) process.exitCode = 2;

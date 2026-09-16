@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "VibeCoder Resource Center — Rodrigo Cazuza",
   description: "A curated library of design, AI, Figma, inspiration, typography, motion, UI libraries and front-end resources.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  other: { "codex-preview": "development" },
   openGraph: {
     title: "VibeCoder Resource Center — Rodrigo Cazuza",
     description: "A searchable resource center for designers, developers and AI-assisted creative workflows.",
