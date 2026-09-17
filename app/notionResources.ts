@@ -132,4 +132,17 @@ export const notionResources: Resource[] = [
     access: "Freemium",
     keywords: "miro whiteboard collaboration diagrams user flows workshops productivity planning",
   },
+  {
+    id: 411,
+    name: "MotionSites AI",
+    type: "Prompt Library",
+    url: "https://motionsites.ai/",
+    platform: "MotionSites AI",
+    category: "AI Skills",
+    description: "A visual library of ready-to-use prompts for creating polished AI-generated websites and landing-page sections.",
+    bestFor: "Building animated hero sections, landing pages, and interface concepts with Lovable, Bolt, Cursor, or Claude.",
+    audience: "Designer & Developer",
+    access: "Free",
+    keywords: "motionsites ai prompts motion animated websites landing pages hero sections lovable bolt cursor claude inspiration web design",
+  },
 ];

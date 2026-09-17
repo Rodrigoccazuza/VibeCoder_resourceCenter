@@ -1,19 +1,59 @@
 {
-  "generatedAt": "2026-09-16T16:10:18.409Z",
-  "totalCards": 251,
-  "testedLinks": 251,
+  "generatedAt": "2026-09-17T02:49:13.123Z",
+  "totalCards": 252,
+  "testedLinks": 252,
   "unresolved": [],
   "broken": [],
   "searchDestinations": [],
-  "blockedCount": 51,
+  "blockedCount": 241,
   "blocked": [
     {
-      "name": "ChatGPT",
-      "requestedUrl": "https://chatgpt.com/"
+      "name": "Adobe Background Remover",
+      "requestedUrl": "https://www.adobe.com/express/feature/image/remove-background"
+    },
+    {
+      "name": "Aiverse Design",
+      "requestedUrl": "https://www.aiverse.design/"
+    },
+    {
+      "name": "Claude Code",
+      "requestedUrl": "https://www.anthropic.com/claude-code"
     },
     {
       "name": "Codex by GPT",
       "requestedUrl": "https://openai.com/codex/"
+    },
+    {
+      "name": "Google ImageFX",
+      "requestedUrl": "https://labs.google/fx/tools/image-fx"
+    },
+    {
+      "name": "Hailuo AI",
+      "requestedUrl": "https://hailuoai.video/"
+    },
+    {
+      "name": "Kive AI",
+      "requestedUrl": "https://www.kive.ai/"
+    },
+    {
+      "name": "Kling AI",
+      "requestedUrl": "https://klingai.com/"
+    },
+    {
+      "name": "Let's Enhance",
+      "requestedUrl": "https://letsenhance.io/"
+    },
+    {
+      "name": "MagicPath",
+      "requestedUrl": "https://www.magicpath.ai/"
+    },
+    {
+      "name": "Magnific AI",
+      "requestedUrl": "https://magnific.ai/"
+    },
+    {
+      "name": "Manus AI",
+      "requestedUrl": "https://manus.im/"
     },
     {
       "name": "Midjourney",
@@ -24,6 +64,22 @@
       "requestedUrl": "https://gemini.google.com/"
     },
     {
+      "name": "PicWish",
+      "requestedUrl": "https://picwish.com/"
+    },
+    {
+      "name": "PixCut",
+      "requestedUrl": "https://pixcut.wondershare.com/"
+    },
+    {
+      "name": "Runway",
+      "requestedUrl": "https://runwayml.com/"
+    },
+    {
+      "name": "The Shape of AI",
+      "requestedUrl": "https://www.shapeof.ai/"
+    },
+    {
       "name": "Visual Electric",
       "requestedUrl": "https://visualelectric.com/"
     },
@@ -32,12 +88,24 @@
       "requestedUrl": "https://www.canva.com/"
     },
     {
+      "name": "Colormind",
+      "requestedUrl": "http://colormind.io/"
+    },
+    {
       "name": "Coolors",
       "requestedUrl": "https://coolors.co/"
     },
     {
+      "name": "Freepik",
+      "requestedUrl": "https://www.freepik.com/"
+    },
+    {
       "name": "Upwork",
       "requestedUrl": "https://www.upwork.com/"
+    },
+    {
+      "name": "Better Logo Figma Plugin",
+      "requestedUrl": "https://better-logo.com/"
     },
     {
       "name": "Content Reel",
@@ -48,12 +116,32 @@
       "requestedUrl": "https://www.figma.com/community/plugin/748533339900865323"
     },
     {
+      "name": "Design Documentation Figma Plugin",
+      "requestedUrl": "https://www.figma.com/solutions/ai-design-documentation-generator/"
+    },
+    {
       "name": "Feather Icons Figma Plugin",
       "requestedUrl": "https://www.figma.com/community/plugin/744047966581015514/Feather"
     },
     {
+      "name": "Figma",
+      "requestedUrl": "https://www.figma.com/"
+    },
+    {
       "name": "Figma Community",
       "requestedUrl": "https://www.figma.com/community"
+    },
+    {
+      "name": "Figma Components",
+      "requestedUrl": "https://help.figma.com/hc/en-us/articles/360038662654-Guide-to-components-in-Figma"
+    },
+    {
+      "name": "Framer Extension for Figma",
+      "requestedUrl": "https://www.framer.com/figma/"
+    },
+    {
+      "name": "Html to Design Figma Plugin",
+      "requestedUrl": "https://html.to.design/home"
     },
     {
       "name": "Insert Big Image Figma Plugin",
@@ -80,24 +168,128 @@
       "requestedUrl": "https://www.figma.com/community/plugin/838925615018625519/pitchdeck-presentation-studio"
     },
     {
+      "name": "SegmentUI",
+      "requestedUrl": "https://segmentui.com/"
+    },
+    {
+      "name": "UI Wiki",
+      "requestedUrl": "https://uiwiki.co/"
+    },
+    {
+      "name": "Vectorize Figma Plugin",
+      "requestedUrl": "https://www.figma.com/solutions/vectorize-image/"
+    },
+    {
       "name": "WebP Exporter Figma Plugin",
       "requestedUrl": "https://www.figma.com/community/plugin/1181873200384736932"
+    },
+    {
+      "name": "App Shots",
+      "requestedUrl": "https://appshots.design/"
+    },
+    {
+      "name": "Awwwards",
+      "requestedUrl": "https://www.awwwards.com/"
+    },
+    {
+      "name": "Bento Grids",
+      "requestedUrl": "https://bentogrids.com/"
+    },
+    {
+      "name": "btw Landing Pages",
+      "requestedUrl": "https://www.btw.so/marketing/landing-page-examples"
+    },
+    {
+      "name": "DesignMunk",
+      "requestedUrl": "https://designmunk.com/"
+    },
+    {
+      "name": "Dribbble",
+      "requestedUrl": "https://dribbble.com/"
+    },
+    {
+      "name": "Footer Design",
+      "requestedUrl": "https://www.footer.design/"
+    },
+    {
+      "name": "Framer Community Gallery",
+      "requestedUrl": "https://www.framer.com/community/"
+    },
+    {
+      "name": "Framer Gallery",
+      "requestedUrl": "https://www.framer.com/gallery/"
+    },
+    {
+      "name": "Good Design Tools",
+      "requestedUrl": "https://gooddesign.tools/"
     },
     {
       "name": "Land Book",
       "requestedUrl": "https://land-book.com/"
     },
     {
+      "name": "Landing Love",
+      "requestedUrl": "https://www.landing.love/"
+    },
+    {
+      "name": "LandingFolio",
+      "requestedUrl": "https://www.landingfolio.com/"
+    },
+    {
       "name": "Lapa Ninja",
       "requestedUrl": "https://www.lapa.ninja/"
+    },
+    {
+      "name": "Layers",
+      "requestedUrl": "https://layers.to/"
+    },
+    {
+      "name": "Mobbin",
+      "requestedUrl": "https://mobbin.com/"
+    },
+    {
+      "name": "Muzli",
+      "requestedUrl": "https://muz.li/"
+    },
+    {
+      "name": "One Page Love",
+      "requestedUrl": "https://onepagelove.com/"
+    },
+    {
+      "name": "Pafolios",
+      "requestedUrl": "https://pafolios.com/"
     },
     {
       "name": "Page Flows",
       "requestedUrl": "https://pageflows.com/"
     },
     {
+      "name": "Pinterest",
+      "requestedUrl": "https://www.pinterest.com/"
+    },
+    {
+      "name": "Really Good Emails",
+      "requestedUrl": "https://reallygoodemails.com/"
+    },
+    {
+      "name": "Refero Design",
+      "requestedUrl": "https://refero.design/"
+    },
+    {
+      "name": "SaaS Landing Page",
+      "requestedUrl": "https://saaslandingpage.com/"
+    },
+    {
+      "name": "Savee",
+      "requestedUrl": "https://savee.it/"
+    },
+    {
       "name": "Screenshots Club",
       "requestedUrl": "https://screenshots.club/"
+    },
+    {
+      "name": "User Onboarding",
+      "requestedUrl": "https://www.useronboard.com/"
     },
     {
       "name": "Pexels",
@@ -112,20 +304,180 @@
       "requestedUrl": "https://unsplash.com/"
     },
     {
+      "name": "Notion",
+      "requestedUrl": "https://www.notion.com/"
+    },
+    {
+      "name": "OBS Studio",
+      "requestedUrl": "https://obsproject.com/"
+    },
+    {
+      "name": "Absurd Design",
+      "requestedUrl": "https://absurd.design/"
+    },
+    {
+      "name": "Adobe Fonts",
+      "requestedUrl": "https://fonts.adobe.com/"
+    },
+    {
+      "name": "Animated Emojis",
+      "requestedUrl": "https://threedee.design/blog/3d-emoji-pack-emoticonz"
+    },
+    {
+      "name": "Avataaars",
+      "requestedUrl": "https://getavataaars.com/"
+    },
+    {
+      "name": "CapCut",
+      "requestedUrl": "https://www.capcut.com/"
+    },
+    {
       "name": "Comunidade Skills",
       "requestedUrl": "https://www.comunidadeskills.com/"
+    },
+    {
+      "name": "Daily UI",
+      "requestedUrl": "https://www.dailyui.co/"
+    },
+    {
+      "name": "Design Systems Brasileiros",
+      "requestedUrl": "https://designsystemsbrasileiros.com/"
     },
     {
       "name": "Design Systems for Figma",
       "requestedUrl": "https://www.designsystemsforfigma.com/"
     },
     {
+      "name": "Designercize",
+      "requestedUrl": "https://designercize.com/"
+    },
+    {
+      "name": "DrawKit",
+      "requestedUrl": "https://www.drawkit.com/"
+    },
+    {
+      "name": "Epidemic Sound",
+      "requestedUrl": "https://www.epidemicsound.com/"
+    },
+    {
+      "name": "Eva Icons",
+      "requestedUrl": "https://akveo.github.io/eva-icons/"
+    },
+    {
+      "name": "FakeClients",
+      "requestedUrl": "https://fakeclients.com/"
+    },
+    {
+      "name": "Font Awesome",
+      "requestedUrl": "https://fontawesome.com/"
+    },
+    {
+      "name": "FontPair",
+      "requestedUrl": "https://www.fontpair.co/"
+    },
+    {
+      "name": "Fontshare",
+      "requestedUrl": "https://www.fontshare.com/"
+    },
+    {
       "name": "Free Illustrations",
       "requestedUrl": "https://getillustrations.com/free-illustrations"
     },
     {
+      "name": "Goodbrief",
+      "requestedUrl": "https://goodbrief.io/"
+    },
+    {
+      "name": "Growth.Design",
+      "requestedUrl": "https://growth.design/"
+    },
+    {
+      "name": "Handz",
+      "requestedUrl": "https://www.handz.design/"
+    },
+    {
+      "name": "Humaaans",
+      "requestedUrl": "https://www.humaaans.com/"
+    },
+    {
+      "name": "Iconoir",
+      "requestedUrl": "https://iconoir.com/"
+    },
+    {
+      "name": "IconPark",
+      "requestedUrl": "https://iconpark.oceanengine.com/"
+    },
+    {
       "name": "Icons8",
       "requestedUrl": "https://icons8.com/"
+    },
+    {
+      "name": "IRA Design",
+      "requestedUrl": "https://iradesign.io/"
+    },
+    {
+      "name": "Justinmind Wireframing Guide",
+      "requestedUrl": "https://www.justinmind.com/wireframe/low-fidelity-vs-high-fidelity-wireframing-is-paper-dead"
+    },
+    {
+      "name": "Khroma",
+      "requestedUrl": "https://www.khroma.co/"
+    },
+    {
+      "name": "LS Graphics",
+      "requestedUrl": "https://www.ls.graphics/"
+    },
+    {
+      "name": "Mesh Gradients",
+      "requestedUrl": "https://meshgradient.com/"
+    },
+    {
+      "name": "NHS Design System",
+      "requestedUrl": "https://service-manual.nhs.uk/design-system"
+    },
+    {
+      "name": "Noise & Gradient",
+      "requestedUrl": "https://www.noiseandgradient.com/"
+    },
+    {
+      "name": "Open Doodles",
+      "requestedUrl": "https://www.opendoodles.com/"
+    },
+    {
+      "name": "Realtime Colors",
+      "requestedUrl": "https://www.realtimecolors.com/"
+    },
+    {
+      "name": "ShapeFest",
+      "requestedUrl": "https://www.shapefest.com/"
+    },
+    {
+      "name": "Sharpen",
+      "requestedUrl": "https://sharpen.design/"
+    },
+    {
+      "name": "Storyset",
+      "requestedUrl": "https://storyset.com/"
+    },
+    {
+      "name": "The Design System Checklist",
+      "requestedUrl": "https://www.designsystemchecklist.com/"
+    },
+    {
+      "name": "Toolfolio",
+      "requestedUrl": "https://toolfolio.io/"
+    },
+    {
+      "name": "Type Scale",
+      "requestedUrl": "https://typescale.com/"
+    },
+    {
+      "name": "Typewolf",
+      "requestedUrl": "https://www.typewolf.com/"
+    },
+    {
+      "name": "UI Goodies",
+      "requestedUrl": "https://uigoodies.com/"
     },
     {
       "name": "UI8",
@@ -136,32 +488,220 @@
       "requestedUrl": "https://uxchallenge.com/"
     },
     {
+      "name": "WhatFontIs",
+      "requestedUrl": "https://www.whatfontis.com/"
+    },
+    {
+      "name": "Google Fonts",
+      "requestedUrl": "https://fonts.google.com/"
+    },
+    {
+      "name": "WhatFont",
+      "requestedUrl": "https://whatfonttool.com/"
+    },
+    {
+      "name": "Wix Web Safe Fonts Guide",
+      "requestedUrl": "https://www.wix.com/blog/web-safe-fonts"
+    },
+    {
+      "name": "Blobmaker",
+      "requestedUrl": "https://www.blobmaker.app/"
+    },
+    {
+      "name": "Boosters",
+      "requestedUrl": "https://www.flowbase.co/"
+    },
+    {
       "name": "Brumm Shadow Generator",
       "requestedUrl": "https://shadows.brumm.af/"
+    },
+    {
+      "name": "Export SVG Extension",
+      "requestedUrl": "https://github.com/martingraham/svgExport"
+    },
+    {
+      "name": "Flowbase",
+      "requestedUrl": "https://www.flowbase.co/"
+    },
+    {
+      "name": "Framer",
+      "requestedUrl": "https://www.framer.com/"
+    },
+    {
+      "name": "Get Waves",
+      "requestedUrl": "https://getwaves.io/"
+    },
+    {
+      "name": "Google reCAPTCHA",
+      "requestedUrl": "https://www.google.com/recaptcha/about/"
+    },
+    {
+      "name": "GSAP (GreenSock Animation Platform)",
+      "requestedUrl": "https://gsap.com/"
+    },
+    {
+      "name": "Haikei",
+      "requestedUrl": "https://app.haikei.app/"
+    },
+    {
+      "name": "Hero Patterns",
+      "requestedUrl": "https://heropatterns.com/"
+    },
+    {
+      "name": "Image-to-ThreeJS",
+      "requestedUrl": "https://github.com/img2threejs/img2threejs"
+    },
+    {
+      "name": "Meyerweb CSS Reset",
+      "requestedUrl": "https://meyerweb.com/eric/tools/css/reset/"
+    },
+    {
+      "name": "Neumorphism.io",
+      "requestedUrl": "https://neumorphism.io/#e0e0e0"
+    },
+    {
+      "name": "React Bits",
+      "requestedUrl": "https://www.reactbits.dev/"
+    },
+    {
+      "name": "TweakCN",
+      "requestedUrl": "https://tweakcn.com/"
     },
     {
       "name": "Uiverse",
       "requestedUrl": "https://uiverse.io/"
     },
     {
+      "name": "Vite",
+      "requestedUrl": "https://vite.dev/"
+    },
+    {
+      "name": "Wappalyzer",
+      "requestedUrl": "https://www.wappalyzer.com/"
+    },
+    {
+      "name": "Webflow",
+      "requestedUrl": "https://webflow.com/"
+    },
+    {
       "name": "MILLED",
       "requestedUrl": "https://milled.com/"
+    },
+    {
+      "name": "Lorem Ipsum Generator",
+      "requestedUrl": "https://loremipsum.io/generator/"
+    },
+    {
+      "name": "Bootstrap Icons",
+      "requestedUrl": "https://icons.getbootstrap.com/"
+    },
+    {
+      "name": "Remix Icon",
+      "requestedUrl": "https://remixicon.com/"
+    },
+    {
+      "name": "Boxicons",
+      "requestedUrl": "https://boxicons.com/"
+    },
+    {
+      "name": "Phosphor Icons",
+      "requestedUrl": "https://phosphoricons.com/"
+    },
+    {
+      "name": "Tabler Icons",
+      "requestedUrl": "https://tabler.io/icons"
+    },
+    {
+      "name": "Lucide",
+      "requestedUrl": "https://lucide.dev/"
+    },
+    {
+      "name": "Heroicons",
+      "requestedUrl": "https://heroicons.com/"
     },
     {
       "name": "Line Awesome",
       "requestedUrl": "https://icons8.com/line-awesome"
     },
     {
+      "name": "Ionicons",
+      "requestedUrl": "https://ionic.io/ionicons"
+    },
+    {
       "name": "Simple Icons",
       "requestedUrl": "https://simpleicons.org/"
+    },
+    {
+      "name": "Devicon",
+      "requestedUrl": "https://devicon.dev/"
+    },
+    {
+      "name": "Weather Icons",
+      "requestedUrl": "https://erikflowers.github.io/weather-icons/"
+    },
+    {
+      "name": "CSS.gg",
+      "requestedUrl": "https://css.gg/"
+    },
+    {
+      "name": "21st.dev",
+      "requestedUrl": "https://21st.dev/"
+    },
+    {
+      "name": "AI-Generated App Security Checklist",
+      "requestedUrl": "https://app.notion.com/p/3d571158b38480cbbbd7f4ed0365f4db"
+    },
+    {
+      "name": "Anti-Portfolio",
+      "requestedUrl": "https://anti-portfolio.framer.website/"
+    },
+    {
+      "name": "Blender",
+      "requestedUrl": "https://www.blender.org/"
+    },
+    {
+      "name": "Canvas UI",
+      "requestedUrl": "https://canvasui.dev/components"
+    },
+    {
+      "name": "Colir Space",
+      "requestedUrl": "https://colir.space/app"
+    },
+    {
+      "name": "Colorable",
+      "requestedUrl": "https://colorable.jxnblk.com/"
+    },
+    {
+      "name": "Colorflow",
+      "requestedUrl": "https://colorflow.ls.graphics/"
+    },
+    {
+      "name": "Figma MCP Server",
+      "requestedUrl": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server"
+    },
+    {
+      "name": "Gradient Lab",
+      "requestedUrl": "https://backgrounds.supply/gradient-lab"
     },
     {
       "name": "Gradient SaaS",
       "requestedUrl": "https://gradientsaas.blogspot.com/"
     },
     {
+      "name": "Jitter Templates",
+      "requestedUrl": "https://jitter.video/templates/stack/"
+    },
+    {
       "name": "Kigen",
       "requestedUrl": "https://www.figma.com/community/plugin/1499119094608975695/kigen-generate-design-system-variable-style-document"
+    },
+    {
+      "name": "Liquid Logo",
+      "requestedUrl": "https://github.com/collidingScopes/liquid-logo"
+    },
+    {
+      "name": "LiquidGlass.js",
+      "requestedUrl": "https://github.com/Mael-667/Liquid-Glass-CSS"
     },
     {
       "name": "Magnifier",
@@ -172,6 +712,46 @@
       "requestedUrl": "https://mattewy.dev/"
     },
     {
+      "name": "Miro",
+      "requestedUrl": "https://miro.com/"
+    },
+    {
+      "name": "OmniRoute",
+      "requestedUrl": "https://github.com/diegosouzapw/OmniRoute"
+    },
+    {
+      "name": "OriginKit",
+      "requestedUrl": "https://www.originkit.dev/"
+    },
+    {
+      "name": "Playwright MCP",
+      "requestedUrl": "https://github.com/microsoft/playwright-mcp"
+    },
+    {
+      "name": "Ponytail",
+      "requestedUrl": "https://github.com/DietrichGebert/ponytail"
+    },
+    {
+      "name": "Ramps",
+      "requestedUrl": "https://ramps.studio/"
+    },
+    {
+      "name": "React Three Fiber",
+      "requestedUrl": "https://github.com/pmndrs/react-three-fiber"
+    },
+    {
+      "name": "Remotion",
+      "requestedUrl": "https://www.remotion.dev/"
+    },
+    {
+      "name": "shadcn/ui",
+      "requestedUrl": "https://ui.shadcn.com/"
+    },
+    {
+      "name": "ShaderGradient",
+      "requestedUrl": "https://github.com/ruucm/shadergradient"
+    },
+    {
       "name": "ShotDeck",
       "requestedUrl": "https://shotdeck.com/"
     },
@@ -180,8 +760,36 @@
       "requestedUrl": "https://sirio.online/"
     },
     {
+      "name": "Sketchfab",
+      "requestedUrl": "https://sketchfab.com/"
+    },
+    {
+      "name": "Spline",
+      "requestedUrl": "https://spline.design/"
+    },
+    {
       "name": "Tabbied Patterns",
       "requestedUrl": "https://tabbied.com/patterns/"
+    },
+    {
+      "name": "Tailwind Plus Templates",
+      "requestedUrl": "https://tailwindcss.com/plus/templates"
+    },
+    {
+      "name": "Taliahhh",
+      "requestedUrl": "https://taliahhh.com/"
+    },
+    {
+      "name": "Taste Skill",
+      "requestedUrl": "https://github.com/Leonxlnx/taste-skill"
+    },
+    {
+      "name": "Three UI",
+      "requestedUrl": "https://threeui.com/browse"
+    },
+    {
+      "name": "unDraw Illustrations",
+      "requestedUrl": "https://undraw.co/illustrations"
     },
     {
       "name": "Unreal Engine",
@@ -192,304 +800,179 @@
       "requestedUrl": "https://www.figma.com/community/plugin/1228969298040149016/wireframe-designer"
     },
     {
+      "name": "Zoxilsi Studio",
+      "requestedUrl": "https://studio.zoxilsi.cc/"
+    },
+    {
+      "name": "Motion Examples",
+      "requestedUrl": "https://motion.dev/examples"
+    },
+    {
       "name": "Motion Primitives",
       "requestedUrl": "https://motion-primitives.com/"
+    },
+    {
+      "name": "Magic UI",
+      "requestedUrl": "https://magicui.design/"
+    },
+    {
+      "name": "Aceternity UI",
+      "requestedUrl": "https://ui.aceternity.com/"
+    },
+    {
+      "name": "Hover.dev",
+      "requestedUrl": "https://www.hover.dev/"
+    },
+    {
+      "name": "Animata",
+      "requestedUrl": "https://www.animata.design/"
+    },
+    {
+      "name": "Osmo",
+      "requestedUrl": "https://www.osmo.supply/"
+    },
+    {
+      "name": "Radix UI",
+      "requestedUrl": "https://www.radix-ui.com/"
+    },
+    {
+      "name": "Ark UI",
+      "requestedUrl": "https://ark-ui.com/"
+    },
+    {
+      "name": "Park UI",
+      "requestedUrl": "https://park-ui.com/"
+    },
+    {
+      "name": "Mantine",
+      "requestedUrl": "https://mantine.dev/"
+    },
+    {
+      "name": "Chakra UI",
+      "requestedUrl": "https://chakra-ui.com/"
+    },
+    {
+      "name": "HeroUI",
+      "requestedUrl": "https://heroui.com/"
+    },
+    {
+      "name": "daisyUI",
+      "requestedUrl": "https://daisyui.com/"
+    },
+    {
+      "name": "Flowbite",
+      "requestedUrl": "https://flowbite.com/"
+    },
+    {
+      "name": "Preline UI",
+      "requestedUrl": "https://preline.co/"
+    },
+    {
+      "name": "Headless UI",
+      "requestedUrl": "https://headlessui.com/"
+    },
+    {
+      "name": "Material UI",
+      "requestedUrl": "https://mui.com/material-ui/"
+    },
+    {
+      "name": "Ant Design",
+      "requestedUrl": "https://ant.design/"
+    },
+    {
+      "name": "PrimeReact",
+      "requestedUrl": "https://primereact.dev/"
+    },
+    {
+      "name": "Tremor",
+      "requestedUrl": "https://www.tremor.so/"
+    },
+    {
+      "name": "Base UI",
+      "requestedUrl": "https://base-ui.com/"
+    },
+    {
+      "name": "Kibo UI",
+      "requestedUrl": "https://www.kibo-ui.com/"
+    },
+    {
+      "name": "Dice UI",
+      "requestedUrl": "https://diceui.com/"
     },
     {
       "name": "Cult UI",
       "requestedUrl": "https://www.cult-ui.com/"
     },
     {
+      "name": "Tailark",
+      "requestedUrl": "https://tailark.com/"
+    },
+    {
+      "name": "Float UI",
+      "requestedUrl": "https://floatui.com/"
+    },
+    {
       "name": "HyperUI",
       "requestedUrl": "https://www.hyperui.dev/"
+    },
+    {
+      "name": "Meraki UI",
+      "requestedUrl": "https://merakiui.com/"
+    },
+    {
+      "name": "TailGrids",
+      "requestedUrl": "https://tailgrids.com/"
+    },
+    {
+      "name": "FlyonUI",
+      "requestedUrl": "https://flyonui.com/"
+    },
+    {
+      "name": "Catalyst",
+      "requestedUrl": "https://catalyst.tailwindui.com/"
+    },
+    {
+      "name": "Reelfolio",
+      "requestedUrl": "https://reelfolio.io/"
     },
     {
       "name": "DESIGN.md",
       "requestedUrl": "https://designmd.ai/"
     },
     {
+      "name": "Panda New Tab",
+      "requestedUrl": "https://chromewebstore.google.com/detail/panda-new-tab/haafibkemckmbknhfkiiniobjpgkebko"
+    },
+    {
+      "name": "Design Index",
+      "requestedUrl": "https://www.designindex.xyz/"
+    },
+    {
       "name": "Milled",
       "requestedUrl": "https://milled.com/"
+    },
+    {
+      "name": "Motion for React",
+      "requestedUrl": "https://motion.dev/docs/react"
+    },
+    {
+      "name": "Claude Design-System Guide",
+      "requestedUrl": "https://descomplicandosites.com.br/como-fazer-o-claude-criar-exatamente-do-jeito-que-voce-gosta-design-system/"
+    },
+    {
+      "name": "OmniRoute",
+      "requestedUrl": "https://www.omniroute.online/"
+    },
+    {
+      "name": "Miro",
+      "requestedUrl": "https://miro.com/"
+    },
+    {
+      "name": "MotionSites AI",
+      "requestedUrl": "https://motionsites.ai/"
     }
   ],
-  "redirected": [
-    {
-      "name": "Adobe Background Remover",
-      "url": "https://www.adobe.com/express/feature/image/remove-background",
-      "category": "AI",
-      "file": "app/resources.ts",
-      "resolved": "https://www.adobe.com/express/feature/image/remove-background",
-      "requestedUrl": "https://www.adobe.com/express/feature/image/remove-background",
-      "finalUrl": "https://www.adobe.com/products/firefly/features/remove-background.html",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Claude Code",
-      "url": "https://www.anthropic.com/claude-code",
-      "category": "AI",
-      "file": "app/resources.ts",
-      "resolved": "https://www.anthropic.com/claude-code",
-      "requestedUrl": "https://www.anthropic.com/claude-code",
-      "finalUrl": "https://claude.com/product/claude-code",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Google ImageFX",
-      "url": "https://labs.google/fx/tools/image-fx",
-      "category": "AI",
-      "file": "app/resources.ts",
-      "resolved": "https://labs.google/fx/tools/image-fx",
-      "requestedUrl": "https://labs.google/fx/tools/image-fx",
-      "finalUrl": "https://flow.google.com/?from=imagefx",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Kive AI",
-      "url": "https://www.kive.ai/",
-      "category": "AI",
-      "file": "app/resources.ts",
-      "resolved": "https://www.kive.ai/",
-      "requestedUrl": "https://www.kive.ai/",
-      "finalUrl": "https://kive.ai/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Kling AI",
-      "url": "https://klingai.com/",
-      "category": "AI",
-      "file": "app/resources.ts",
-      "resolved": "https://klingai.com/",
-      "requestedUrl": "https://klingai.com/",
-      "finalUrl": "https://kling.ai/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Magnific AI",
-      "url": "https://magnific.ai/",
-      "category": "AI",
-      "file": "app/resources.ts",
-      "resolved": "https://magnific.ai/",
-      "requestedUrl": "https://magnific.ai/",
-      "finalUrl": "https://www.magnific.com/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Runway",
-      "url": "https://runwayml.com/",
-      "category": "AI",
-      "file": "app/resources.ts",
-      "resolved": "https://runwayml.com/",
-      "requestedUrl": "https://runwayml.com/",
-      "finalUrl": "https://runway.com/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Freepik",
-      "url": "https://www.freepik.com/",
-      "category": "Branding",
-      "file": "app/resources.ts",
-      "resolved": "https://www.freepik.com/",
-      "requestedUrl": "https://www.freepik.com/",
-      "finalUrl": "https://www.magnific.com/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Framer Extension for Figma",
-      "url": "https://www.framer.com/figma/",
-      "category": "Figma",
-      "file": "app/resources.ts",
-      "resolved": "https://www.framer.com/figma/",
-      "requestedUrl": "https://www.framer.com/figma/",
-      "finalUrl": "https://www.framer.com/solutions/figma-to-html/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Framer Community Gallery",
-      "url": "https://www.framer.com/community/",
-      "category": "Inspiration",
-      "file": "app/resources.ts",
-      "resolved": "https://www.framer.com/community/",
-      "requestedUrl": "https://www.framer.com/community/",
-      "finalUrl": "https://www.framer.com/marketplace/templates/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Framer Gallery",
-      "url": "https://www.framer.com/gallery/",
-      "category": "Inspiration",
-      "file": "app/resources.ts",
-      "resolved": "https://www.framer.com/gallery/",
-      "requestedUrl": "https://www.framer.com/gallery/",
-      "finalUrl": "https://www.framer.com/community/gallery/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Good Design Tools",
-      "url": "https://gooddesign.tools/",
-      "category": "Inspiration",
-      "file": "app/resources.ts",
-      "resolved": "https://gooddesign.tools/",
-      "requestedUrl": "https://gooddesign.tools/",
-      "finalUrl": "https://www.gooddesign.tools/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Layers",
-      "url": "https://layers.to/",
-      "category": "Inspiration",
-      "file": "app/resources.ts",
-      "resolved": "https://layers.to/",
-      "requestedUrl": "https://layers.to/",
-      "finalUrl": "https://layers.to/explore",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Savee",
-      "url": "https://savee.it/",
-      "category": "Inspiration",
-      "file": "app/resources.ts",
-      "resolved": "https://savee.it/",
-      "requestedUrl": "https://savee.it/",
-      "finalUrl": "https://savee.com/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "FontPair",
-      "url": "https://www.fontpair.co/",
-      "category": "Resources",
-      "file": "app/resources.ts",
-      "resolved": "https://www.fontpair.co/",
-      "requestedUrl": "https://www.fontpair.co/",
-      "finalUrl": "https://fontpair.co/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "ShapeFest",
-      "url": "https://www.shapefest.com/",
-      "category": "Resources",
-      "file": "app/resources.ts",
-      "resolved": "https://www.shapefest.com/",
-      "requestedUrl": "https://www.shapefest.com/",
-      "finalUrl": "https://shapefest.com/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Toolfolio",
-      "url": "https://toolfolio.io/",
-      "category": "Resources",
-      "file": "app/resources.ts",
-      "resolved": "https://toolfolio.io/",
-      "requestedUrl": "https://toolfolio.io/",
-      "finalUrl": "https://toolfolio.com/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Google reCAPTCHA",
-      "url": "https://www.google.com/recaptcha/about/",
-      "category": "Web Development",
-      "file": "app/resources.ts",
-      "resolved": "https://www.google.com/recaptcha/about/",
-      "requestedUrl": "https://www.google.com/recaptcha/about/",
-      "finalUrl": "https://cloud.google.com/security/products/recaptcha",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Neumorphism.io",
-      "url": "https://neumorphism.io/#e0e0e0",
-      "category": "Web Development",
-      "file": "app/resources.ts",
-      "resolved": "https://neumorphism.io/#e0e0e0",
-      "requestedUrl": "https://neumorphism.io/#e0e0e0",
-      "finalUrl": "https://neumorphism.io/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Colir Space",
-      "url": "https://colir.space/app",
-      "category": "Colors & Backgrounds",
-      "file": "app/resources.ts",
-      "resolved": "https://colir.space/app",
-      "requestedUrl": "https://colir.space/app",
-      "finalUrl": "http://colir.space/app/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Figma MCP Server",
-      "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server",
-      "category": "AI Skills",
-      "file": "app/resources.ts",
-      "resolved": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server",
-      "requestedUrl": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server",
-      "finalUrl": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Ramps",
-      "url": "https://ramps.studio/",
-      "category": "Colors & Backgrounds",
-      "file": "app/resources.ts",
-      "resolved": "https://ramps.studio/",
-      "requestedUrl": "https://ramps.studio/",
-      "finalUrl": "https://www.ramps.studio/",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    },
-    {
-      "name": "Tailwind Plus Templates",
-      "url": "https://tailwindcss.com/plus/templates",
-      "category": "Design Libraries",
-      "file": "app/resources.ts",
-      "resolved": "https://tailwindcss.com/plus/templates",
-      "requestedUrl": "https://tailwindcss.com/plus/templates",
-      "finalUrl": "https://tailwindcss.com/plus/login",
-      "status": 200,
-      "ok": true,
-      "blocked": false
-    }
-  ],
+  "redirected": [],
   "removedUnverifiedLegacyEntries": [
     "Film AI",
     "Real People Figma Plugin",
