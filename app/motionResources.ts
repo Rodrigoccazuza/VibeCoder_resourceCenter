@@ -103,5 +103,32 @@ export const motionResources: Resource[] = [
     audience: "Developer",
     access: "Freemium",
     keywords: "21st.dev, motion libraries, animation, react, components, directory, ui, interaction"
+  },
+
+  {
+    id: 223,
+    name: "Prompt Motion — Product UI",
+    type: "Library",
+    url: "https://prompt-motion.com/?tag=product-ui",
+    platform: "Prompt Motion",
+    category: "Motion & Interaction",
+    description: "Curated product-interface motion references for transitions, interactive components, interface states, and polished user-experience details.",
+    bestFor: "Finding product UI motion inspiration for cards, navigation, onboarding, state changes, and other website or app interactions.",
+    audience: "Designer",
+    access: "Unknown",
+    keywords: "prompt motion, product ui, interaction, inspiration, motion design, animated ui, website components, transitions"
+  },
+  {
+    id: 224,
+    name: "Prompt Motion — Code",
+    type: "Library",
+    url: "https://prompt-motion.com/?tag=code",
+    platform: "Prompt Motion",
+    category: "Motion & Interaction",
+    description: "Code-oriented motion references and animation examples for building expressive digital experiences.",
+    bestFor: "Exploring implementation-minded motion references and translating animation ideas into frontend experiences.",
+    audience: "Developer",
+    access: "Unknown",
+    keywords: "prompt motion, code, frontend, animation, creative development, motion reference"
   }
 ];
