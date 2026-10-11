@@ -324,5 +324,19 @@ export const uiLibraries: Resource[] = [
     audience: "Developer",
     access: "Paid",
     keywords: "tailwind plus, catalyst, react, application ui, components"
+  },
+
+  {
+    id: 326,
+    name: "Animate UI",
+    type: "Library",
+    url: "https://animate-ui.com/",
+    platform: "Animate UI",
+    category: "UI Component Libraries",
+    description: "Animated UI component collection featuring interactive controls, transitions, and reusable motion-enhanced interface patterns.",
+    bestFor: "Adding component-level animations to buttons, dialogs, accordions, navigation, and other functional website interfaces.",
+    audience: "Developer",
+    access: "Unknown",
+    keywords: "animate ui, react, animated components, motion, microinteractions, dialogs, accordion, navigation, interactive ui"
   }
 ];
