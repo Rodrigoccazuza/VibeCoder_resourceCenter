@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T16:59:15Z",
+  "updatedAt": "2026-10-30T17:02:09Z",
   "items": [
     {
       "id": "8cb2db80dc5c1d4f",
@@ -16,25 +16,11 @@
       "publishedAt": "2026-10-30T14:58:06Z"
     },
     {
-      "id": "40aed769d1c2e6f7",
-      "title": "Skip the small talk: Make game-changing connections at TechCrunch Founder Summit with Braindate",
-      "url": "https://techcrunch.com/2026/10/30/skip-the-small-talk-make-game-changing-connections-at-techcrunch-founder-summit-with-braindate/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-10-30T14:00:00Z"
-    },
-    {
       "id": "f986a412ee0ee44d",
       "title": "DoorDash said it’s only received ‘several hundred’ orders from AI agents",
       "url": "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/",
       "source": "TechCrunch",
       "publishedAt": "2026-10-30T13:54:25Z"
-    },
-    {
-      "id": "5ec9437afb139212",
-      "title": "Silicon Valley wants you to invest in miracles",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1023070/anthropic-ipo-risk-factors-filing-miracles",
-      "source": "The Verge",
-      "publishedAt": "2026-10-30T13:11:05Z"
     },
     {
       "id": "5cfbd02556ec4a84",
@@ -49,20 +35,6 @@
       "url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out/",
       "source": "TechCrunch",
       "publishedAt": "2026-10-30T13:00:00Z"
-    },
-    {
-      "id": "5135d63cacdd4300",
-      "title": "5 days left: Your last chance to connect, scale, and save at TechCrunch Founder Summit 2026",
-      "url": "https://techcrunch.com/2026/10/30/5-days-left-your-last-chance-to-connect-scale-and-save-at-techcrunch-founder-summit-2026/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-10-30T13:00:00Z"
-    },
-    {
-      "id": "dbfbce585037fb7a",
-      "title": "Maine’s data center revolt will decide who controls the Senate",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1021080/maine-senate-race-susan-collins-ai-data-centers",
-      "source": "The Verge",
-      "publishedAt": "2026-10-30T11:00:00Z"
     },
     {
       "id": "c7606af40dbb903f",
@@ -84,20 +56,6 @@
       "url": "https://techcrunch.com/2026/10/29/you-dont-need-to-believe-in-a-god-to-get-a-religious-exemption-from-using-ai-at-work/",
       "source": "TechCrunch",
       "publishedAt": "2026-10-30T01:20:48Z"
-    },
-    {
-      "id": "05367ef1f34c39f8",
-      "title": "AWS will be a $1T business, Jassy says — but first, it will spend big",
-      "url": "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-10-29T23:42:22Z"
-    },
-    {
-      "id": "6224c596d37f354a",
-      "title": "As search traffic dries up, Reddit announces it’s shifting to a logged-in experience",
-      "url": "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-10-29T20:08:31Z"
     },
     {
       "id": "24f3c9778b1e494a",
@@ -135,13 +93,6 @@
       "publishedAt": "2026-10-29T18:39:43Z"
     },
     {
-      "id": "a39d2cb266f95450",
-      "title": "Granola crunches up a dictation feature to compete with Wispr",
-      "url": "https://techcrunch.com/2026/10/29/granola-crunches-up-a-dictation-feature-to-compete-with-wispr/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-10-29T17:54:38Z"
-    },
-    {
       "id": "bcae5e5bffd4de8a",
       "title": "Mistral releases weights for its trillion-parameter AI model, targeting cybersecurity",
       "url": "https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/",
@@ -154,13 +105,6 @@
       "url": "https://openai.com/index/updated-model-spec",
       "source": "OpenAI",
       "publishedAt": "2026-10-29T17:00:00Z"
-    },
-    {
-      "id": "7610575f95441b58",
-      "title": "US investigated Chinese spy plot aimed at Nvidia CEO",
-      "url": "https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-10-29T16:42:32Z"
     },
     {
       "id": "88294416a4cb1079",
@@ -177,18 +121,18 @@
       "publishedAt": "2026-10-29T16:00:00Z"
     },
     {
-      "id": "a2aa84b8c0fc4ac9",
-      "title": "The ‘Pain in the Ass’ Math That Could Save Vibe Coding From Itself",
-      "url": "https://www.wired.com/story/software-verification-is-the-hot-new-answer-to-the-ai-safety-crisis/",
-      "source": "WIRED",
-      "publishedAt": "2026-10-29T15:00:00Z"
-    },
-    {
       "id": "9d92d4ec6e5e3635",
       "title": "The NYT Cooking app is testing AI recipe modifications",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1022193/nyt-cooking-app-ai-recipe-modification-tool",
       "source": "The Verge",
       "publishedAt": "2026-10-29T14:39:37Z"
+    },
+    {
+      "id": "60c269dfa54ed7c5",
+      "title": "Wabi, the AI agent that builds mini apps, now valued at $1.25B after latest round",
+      "url": "https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-29T14:35:26Z"
     },
     {
       "id": "5955274c3dce8919",
@@ -217,6 +161,13 @@
       "url": "https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive",
       "source": "The Verge",
       "publishedAt": "2026-10-29T13:30:00Z"
+    },
+    {
+      "id": "c546a70dbf994e9c",
+      "title": "Deepgram acquires Pipecat-maker Daily to bolster its voice AI infrastructure",
+      "url": "https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-29T13:00:00Z"
     },
     {
       "id": "f863128399a5ccb3",
@@ -273,6 +224,13 @@
       "url": "https://openai.com/index/credit-saison",
       "source": "OpenAI",
       "publishedAt": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "f348c6db37d87fbe",
+      "title": "Google expands AI Search ads globally as core ad growth slows",
+      "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-28T21:48:37Z"
     },
     {
       "id": "5d25973f53528cf6",
@@ -350,6 +308,48 @@
       "url": "https://www.wired.com/story/geoffrey-vos-uk-judge-ai-legal-profession-challenges/",
       "source": "WIRED",
       "publishedAt": "2026-10-28T06:00:00Z"
+    },
+    {
+      "id": "47671cae5a4eb911",
+      "title": "Anthropic Says It Will Revolutionize Biology—Some Day",
+      "url": "https://www.wired.com/story/anthropic-says-it-will-revolutionize-biology-some-day/",
+      "source": "WIRED",
+      "publishedAt": "2026-10-27T19:39:04Z"
+    },
+    {
+      "id": "db98bf59a6c7e420",
+      "title": "Build specialized multimodal models with LFM3",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+      "source": "Hugging Face",
+      "publishedAt": "2026-10-27T17:16:52Z"
+    },
+    {
+      "id": "34370e88c88d0cd4",
+      "title": "Can we trust LLMs to judge whether a research idea is novel?",
+      "url": "https://huggingface.co/blog/allenai/novelty-bench",
+      "source": "Hugging Face",
+      "publishedAt": "2026-10-27T16:12:42Z"
+    },
+    {
+      "id": "d17d13a0006a776d",
+      "title": "Genie 4: A new generation of world simulation",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-10-27T16:01:38Z"
+    },
+    {
+      "id": "ae72bdec54e137cc",
+      "title": "UK Home Office May Face Investigation Over Use of OpenAI Tech",
+      "url": "https://www.wired.com/story/uk-home-office-may-face-investigation-over-use-of-openai-tools/",
+      "source": "WIRED",
+      "publishedAt": "2026-10-27T15:10:26Z"
+    },
+    {
+      "id": "d42fb1eb3362412f",
+      "title": "Retell uses OpenAI models to help power 100M monthly calls",
+      "url": "https://openai.com/index/retell-ai",
+      "source": "OpenAI",
+      "publishedAt": "2026-10-27T15:00:00Z"
     }
   ]
 }
