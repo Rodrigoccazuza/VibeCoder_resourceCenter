@@ -1,10 +1,12 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { resources, type Resource } from "./resources";
 import { motionResources } from "./motionResources";
 import { uiLibraries } from "./uiLibraries";
 import { notionResources } from "./notionResources";
+import { githubResources } from "./githubResources";
+import AiNewsSidebar from "./aiNewsSidebar";
 
 const KNOWN_LINKS: Record<string, string> = {
   "Adobe Background Remover": "https://www.adobe.com/express/feature/image/remove-background",
@@ -119,7 +121,9 @@ const CATEGORY_META: Record<string, { code: string; copy: string }> = {
   "Colors & Backgrounds": { code: "CL", copy: "Accessible palettes, gradients and patterns" },
   "Design Libraries": { code: "DL", copy: "Components, templates and illustrations" },
   "Figma Plugins": { code: "FP", copy: "Extend Figma with focused workflows" },
-  "GitHub Repositories": { code: "GH", copy: "Open-source tools and implementation libraries" },
+  "GitHub": { code: "GH", copy: "Open-source apps, developer tools and AI agent skills" },
+  "GitHub / Open-source Apps": { code: "OS", copy: "Creative applications, video editors, developer libraries and connectors" },
+  "GitHub / Skills": { code: "SK", copy: "Skills and agent workflows from GitHub" },
   "Workflows & Guides": { code: "WG", copy: "Practical checklists and production guidance" },
   Branding: { code: "BR", copy: "Color, identity and brand assets" },
   Business: { code: "BU", copy: "Freelance and client workflows" },
@@ -142,22 +146,29 @@ const resourceCatalog: Resource[] = [
     if (MOTION_RECLASSIFICATIONS.has(resource.name)) return { ...resource, category: "Motion & Interaction" };
     if (UI_LIBRARY_RECLASSIFICATIONS.has(resource.name)) return { ...resource, category: "UI Component Libraries" };
     if (TYPOGRAPHY_RECLASSIFICATIONS.has(resource.name)) return { ...resource, category: "Typography" };
+    if (resource.category === "GitHub Repositories") return { ...resource, category: "GitHub / Open-source Apps" };
     return resource;
   }),
   ...motionResources,
   ...uiLibraries,
   ...notionResources,
+  ...githubResources,
 ];
+
+const GITHUB_CATEGORIES = ["GitHub / Open-source Apps", "GitHub / Skills"];
+const isCategoryMatch = (resource: Resource, selected: string) => selected === "All resources"
+  || (selected === "GitHub" ? GITHUB_CATEGORIES.includes(resource.category) : resource.category === selected);
+const countCategory = (selected: string) => resourceCatalog.filter((resource) => isCategoryMatch(resource, selected)).length;
 
 const PINNED_CATEGORIES = ["Motion & Interaction", "UI Component Libraries"];
 const catalogCategories = [...new Set(resourceCatalog.map((resource) => resource.category))];
 const categories = [
   ...PINNED_CATEGORIES.filter((item) => catalogCategories.includes(item)),
-  ...catalogCategories.filter((item) => !PINNED_CATEGORIES.includes(item)).sort(),
+  ...catalogCategories.filter((item) => !PINNED_CATEGORIES.includes(item) && !GITHUB_CATEGORIES.includes(item)).sort(),
 ];
 const types = [...new Set(resourceCatalog.map((resource) => resource.type))].sort();
 const platforms = [...new Set(resourceCatalog.map((resource) => resource.platform))].sort();
-const FEATURED_COLLECTIONS = ["UI Component Libraries", "Motion & Interaction", "GitHub Repositories", "Figma Plugins", "AI Skills", "3D & Motion", "Design Libraries"];
+const FEATURED_COLLECTIONS = ["UI Component Libraries", "Motion & Interaction", "GitHub", "Figma Plugins", "AI Skills", "3D & Motion", "Design Libraries"];
 
 function getLink(resource: Resource) {
   const known = resource.url || KNOWN_LINKS[resource.name];
@@ -224,7 +235,7 @@ function matchesSearch(resource: Resource, query: string) {
   });
 }
 
-function Icon({ name }: { name: "search" | "arrow" | "grid" | "spark" | "close" | "menu" }) {
+function Icon({ name }: { name: "search" | "arrow" | "grid" | "spark" | "close" | "menu" | "news" | "chevron" }) {
   const paths = {
     search: <><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></>,
     arrow: <><path d="M5 12h14"/><path d="m14 7 5 5-5 5"/></>,
@@ -232,6 +243,8 @@ function Icon({ name }: { name: "search" | "arrow" | "grid" | "spark" | "close" 
     spark: <path d="M12 2 14.6 9.4 22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6Z"/>,
     close: <><path d="m6 6 12 12"/><path d="M18 6 6 18"/></>,
     menu: <><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></>,
+    news: <><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 9h10M7 13h5M7 17h7"/></>,
+    chevron: <path d="m7 10 5 5 5-5"/>,
   };
   return <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">{paths[name]}</svg>;
 }
@@ -244,11 +257,22 @@ export default function Home() {
   const [platform, setPlatform] = useState("All platforms");
   const [visible, setVisible] = useState(24);
   const [mobileNav, setMobileNav] = useState(false);
+  const [githubExpanded, setGithubExpanded] = useState(false);
+  const [newsOpen, setNewsOpen] = useState(false);
+
+  useEffect(() => {
+    const stored = window.localStorage.getItem("vibecoder-ai-news-open");
+    setNewsOpen(stored === null ? window.innerWidth >= 1420 : stored === "true");
+  }, []);
+  const toggleNews = (open: boolean) => {
+    setNewsOpen(open);
+    window.localStorage.setItem("vibecoder-ai-news-open", String(open));
+  };
 
   const filtered = useMemo(() => {
     return resourceCatalog.filter((resource) => {
       return matchesSearch(resource, query)
-        && (category === "All resources" || resource.category === category)
+        && isCategoryMatch(resource, category)
         && (type === "All types" || resource.type === type)
         && (access === "All access" || resource.access === access)
         && (platform === "All platforms" || resource.platform === platform);
@@ -257,7 +281,7 @@ export default function Home() {
 
   const accessOptions = [...new Set(resourceCatalog.map((resource) => resource.access))].sort();
   const officialCount = resourceCatalog.filter((resource) => getLink(resource).verified).length;
-  const selectCategory = (next: string) => { setCategory(next); setVisible(24); setMobileNav(false); };
+  const selectCategory = (next: string) => { setCategory(next); if (next === "GitHub" || GITHUB_CATEGORIES.includes(next)) setGithubExpanded(true); setVisible(24); setMobileNav(false); };
   const search = (value: string) => {
     setQuery(value);
     setCategory("All resources");
@@ -269,16 +293,24 @@ export default function Home() {
   const reset = () => { setQuery(""); setCategory("All resources"); setType("All types"); setAccess("All access"); setPlatform("All platforms"); setVisible(24); };
 
   return (
-    <div className="app-shell">
+    <div className={`app-shell ${newsOpen ? "news-open" : ""}`}>
       <a className="skip-link" href="#resource-grid">Skip to resources</a>
       <aside className={`sidebar ${mobileNav ? "is-open" : ""}`} aria-label="Resource categories">
         <div className="brand-lockup"><span className="brand-mark" aria-hidden="true">RC</span><span><strong>VibeCoder</strong><small>Resource center</small></span></div>
         <nav>
           <p className="nav-label">Explore</p>
           <button className={category === "All resources" ? "active" : ""} onClick={() => selectCategory("All resources")}><span className="nav-icon"><Icon name="grid" /></span><span>All resources</span><b>{resourceCatalog.length}</b></button>
+          <div className="github-nav-group">
+            <button className={`github-parent ${category === "GitHub" || GITHUB_CATEGORIES.includes(category) ? "active" : ""}`} aria-expanded={githubExpanded} aria-controls="github-subcategories" onClick={() => { setGithubExpanded((expanded) => !expanded); setCategory("GitHub"); setVisible(24); }}>
+              <span className="category-code">GH</span><span>GitHub</span><b>{countCategory("GitHub")}</b><span className={`github-chevron ${githubExpanded ? "rotated" : ""}`}><Icon name="chevron" /></span>
+            </button>
+            {githubExpanded && <div id="github-subcategories" className="github-subcategories">
+              {GITHUB_CATEGORIES.map((item) => <button key={item} className={category === item ? "active" : ""} onClick={() => selectCategory(item)}><span className="category-code">{CATEGORY_META[item].code}</span><span>{item === "GitHub / Skills" ? "Skills" : "Open-source Apps & Tools"}</span><b>{countCategory(item)}</b></button>)}
+            </div>}
+          </div>
           {categories.map((item) => (
             <button key={item} className={category === item ? "active" : ""} onClick={() => selectCategory(item)}>
-              <span className="category-code">{CATEGORY_META[item].code}</span><span>{item}</span><b>{resourceCatalog.filter((r) => r.category === item).length}</b>
+              <span className="category-code">{CATEGORY_META[item].code}</span><span>{item}</span><b>{countCategory(item)}</b>
             </button>
           ))}
         </nav>
@@ -292,6 +324,7 @@ export default function Home() {
           <button className="mobile-menu" onClick={() => setMobileNav(true)} aria-label="Open category menu"><Icon name="menu" /></button>
           <label className="search-field"><span className="sr-only">Search resources</span><Icon name="search" /><input value={query} onChange={(event) => search(event.target.value)} placeholder="Search tools, topics or use cases…" />{query && <button onClick={() => search("")} aria-label="Clear search"><Icon name="close" /></button>}</label>
           <div className="topbar-count"><span>{resourceCatalog.length}</span><small>curated resources</small></div>
+          <button className={`news-topbar-button ${newsOpen ? "active" : ""}`} aria-controls="ai-news-sidebar" aria-expanded={newsOpen} onClick={() => toggleNews(!newsOpen)}><Icon name="news" /><span>AI news</span></button>
         </header>
 
         <section className="hero" aria-labelledby="hero-title">
@@ -301,7 +334,7 @@ export default function Home() {
             <p>Search design references, GitHub repositories, Figma plugins, AI skills, motion tools and production guides, organized around what each resource helps you achieve.</p>
             <a href="#resource-grid" className="primary-button">Explore the library <Icon name="arrow" /></a>
           </div>
-          <div className="hero-stats" aria-label="Library statistics"><div><strong>{resourceCatalog.length}</strong><span>Resources</span></div><div><strong>{categories.length}</strong><span>Categories</span></div><div><strong>{officialCount}</strong><span>Direct links</span></div></div>
+          <div className="hero-stats" aria-label="Library statistics"><div><strong>{resourceCatalog.length}</strong><span>Resources</span></div><div><strong>{categories.length + 1}</strong><span>Categories</span></div><div><strong>{officialCount}</strong><span>Direct links</span></div></div>
           <a className="photo-credit" href="https://unsplash.com/photos/black-and-silver-laptop-computer-on-brown-wooden-table-uMHID74NqfM" target="_blank" rel="noreferrer">Photo: Dennis Cortés / Unsplash</a>
         </section>
 
@@ -309,7 +342,7 @@ export default function Home() {
           <div className="section-heading"><div><p className="eyebrow plain">Browse by focus</p><h2 id="category-title">Choose your starting point</h2></div><button onClick={() => selectCategory("All resources")}>View everything <Icon name="arrow" /></button></div>
           <div className="category-cards">
             {FEATURED_COLLECTIONS.map((item) => (
-              <button key={item} className={category === item ? "selected" : ""} onClick={() => selectCategory(item)}><span className="category-card-code">{CATEGORY_META[item].code}</span><span><strong>{item}</strong><small>{CATEGORY_META[item].copy}</small></span><b>{resourceCatalog.filter((resource) => resource.category === item).length}</b></button>
+              <button key={item} className={category === item ? "selected" : ""} onClick={() => selectCategory(item)}><span className="category-card-code">{CATEGORY_META[item].code}</span><span><strong>{item}</strong><small>{CATEGORY_META[item].copy}</small></span><b>{countCategory(item)}</b></button>
             ))}
           </div>
         </section>
@@ -351,6 +384,9 @@ export default function Home() {
 
         <footer><div className="brand-lockup"><span className="brand-mark" aria-hidden="true">RC</span><span><strong>Rodrigo Cazuza</strong><small>Strategy, design & front-end production</small></span></div><p>Built as a practical, evolving reference library.</p><a href="#hero-title">Back to top ↑</a></footer>
       </main>
+      <AiNewsSidebar open={newsOpen} onClose={() => toggleNews(false)} />
+      {!newsOpen && <button className="news-edge-tab" onClick={() => toggleNews(true)} aria-controls="ai-news-sidebar" aria-expanded={false}><Icon name="news" /><span>AI News</span></button>}
+      {newsOpen && <button className="news-backdrop" onClick={() => toggleNews(false)} aria-label="Close AI news panel" />}
     </div>
   );
 }

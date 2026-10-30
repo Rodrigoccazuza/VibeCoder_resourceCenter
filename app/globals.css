@@ -197,3 +197,66 @@ footer > a { padding-bottom: 4px; border-bottom: 1px solid var(--violet); font-s
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+
+/* GitHub hub: nested navigation is distinct from the flat category list. */
+.github-nav-group { margin: 4px 0 12px; }
+.sidebar nav .github-parent { grid-template-columns: 28px minmax(0, 1fr) auto 16px; }
+.github-chevron { display: grid; place-items: center; color: var(--muted); transition: transform .2s ease; }
+.github-chevron svg { width: 15px; height: 15px; }
+.github-chevron.rotated { transform: rotate(180deg); }
+.github-subcategories { margin: 4px 0 8px 16px; padding-left: 10px; border-left: 1px solid rgba(155,92,255,.35); }
+.sidebar nav .github-subcategories button { grid-template-columns: 24px minmax(0, 1fr) auto; min-height: 42px; padding-left: 8px; font-size: 11px; }
+.github-subcategories .category-code { width: 22px; height: 22px; }
+
+/* Collapsible right-hand AI digest. No data is persisted in the site database. */
+.main-content { transition: margin-right .25s ease; }
+.news-topbar-button { display: flex; min-height: 42px; flex: none; align-items: center; gap: 7px; padding: 0 14px; border: 1px solid #373045; border-radius: 999px; background: var(--surface); color: var(--muted); cursor: pointer; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.news-topbar-button svg { width: 16px; height: 16px; }
+.news-topbar-button:hover, .news-topbar-button.active { border-color: var(--violet); color: var(--white); }
+.news-edge-tab { position: fixed; z-index: 32; right: 0; top: 44%; display: flex; align-items: center; gap: 8px; padding: 14px 12px; border: 1px solid #40305f; border-right: 0; border-radius: 12px 0 0 12px; background: var(--surface); box-shadow: 0 8px 28px rgba(0,0,0,.35); color: var(--white); cursor: pointer; writing-mode: vertical-rl; }
+.news-edge-tab svg { width: 16px; height: 16px; transform: rotate(90deg); }
+.news-edge-tab span { font-size: 10px; font-weight: 700; letter-spacing: .06em; }
+.news-backdrop { display: none; }
+.ai-news-sidebar { position: fixed; z-index: 46; inset: 0 0 0 auto; display: flex; width: 316px; max-width: 100vw; flex-direction: column; overflow: hidden; border-left: 1px solid #30253f; background: #0c0b10; box-shadow: -10px 0 40px rgba(0,0,0,.28); transform: translateX(101%); transition: transform .25s ease; }
+.ai-news-sidebar.open { transform: translateX(0); }
+.ai-news-heading { flex: none; padding: 28px 18px 14px; border-bottom: 1px solid var(--raised); background: linear-gradient(165deg, rgba(96,38,236,.18), transparent 55%); }
+.ai-news-overline { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; }
+.ai-news-overline .signal-dot { margin-top: 0; width: 6px; height: 6px; }
+.ai-news-title-row { display: flex; justify-content: space-between; align-items: start; gap: 12px; margin-top: 24px; }
+.ai-news-title-row .eyebrow { font-size: 9px; }
+.ai-news-title-row h2 { margin: 0; font-family: "Poppins", sans-serif; font-size: 30px; line-height: 1; letter-spacing: -.05em; }
+.ai-news-title-row h2 span { color: var(--violet-light); }
+.ai-news-close { display: grid; width: 34px; height: 34px; flex: none; place-items: center; border: 1px solid #3a3148; border-radius: 10px; background: var(--surface); color: var(--white); cursor: pointer; font-size: 22px; line-height: 1; }
+.ai-news-heading > p { margin: 12px 0 0; color: var(--muted); font-size: 11px; line-height: 1.65; }
+.ai-news-status { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 20px; color: var(--muted); font-size: 10px; }
+.ai-news-status button { min-height: 32px; padding: 0 8px; border: 1px solid var(--raised); border-radius: 8px; background: transparent; color: var(--white); cursor: pointer; font-size: 10px; }
+.ai-news-status button:disabled { opacity: .45; cursor: wait; }
+.ai-news-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: 16px; padding: 4px; border: 1px solid var(--raised); border-radius: 12px; background: var(--black); }
+.ai-news-tabs button { display: flex; min-height: 36px; align-items: center; justify-content: center; gap: 6px; border: 0; border-radius: 8px; background: transparent; color: var(--muted); cursor: pointer; font-size: 11px; }
+.ai-news-tabs button.selected { background: var(--raised); color: var(--white); }
+.ai-news-tabs button span { color: var(--violet-light); font-size: 10px; }
+.ai-news-stream { flex: 1; min-height: 0; overflow-y: auto; padding: 14px 12px; scrollbar-width: thin; scrollbar-color: #413550 transparent; }
+.ai-news-item { display: block; margin-bottom: 10px; padding: 14px; border: 1px solid var(--raised); border-radius: 12px; background: #141218; transition: border-color .2s ease, transform .2s ease; }
+.ai-news-item:hover { border-color: var(--violet); transform: translateY(-2px); }
+.ai-news-source { display: flex; align-items: center; gap: 7px; min-width: 0; color: var(--muted); font-size: 10px; }
+.ai-news-source img { width: 16px; height: 16px; flex: none; border-radius: 4px; object-fit: contain; background: var(--white); }
+.ai-news-source span { overflow: hidden; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.ai-news-source time { margin-left: auto; flex: none; color: #85808c; font-size: 9px; }
+.ai-news-item h3 { display: -webkit-box; margin: 12px 0; overflow: hidden; font-family: "Inter", sans-serif; font-size: 12px; font-weight: 600; line-height: 1.55; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.ai-news-read { color: var(--violet-light); font-size: 10px; font-weight: 700; }
+.ai-news-empty { padding: 32px 12px; color: var(--muted); font-size: 12px; line-height: 1.7; text-align: center; }
+.ai-news-bottom { flex: none; padding: 13px 16px; border-top: 1px solid var(--raised); color: var(--muted); font-size: 9px; line-height: 1.5; text-align: center; }
+
+@media (min-width: 1421px) {
+  .app-shell.news-open .main-content { margin-right: 316px; }
+}
+@media (max-width: 1420px) {
+  .news-backdrop { position: fixed; z-index: 44; inset: 0; display: block; border: 0; background: rgba(0,0,0,.58); }
+}
+@media (max-width: 600px) {
+  .news-topbar-button { width: 42px; height: 42px; justify-content: center; padding: 0; }
+  .news-topbar-button span { display: none; }
+  .news-edge-tab { top: auto; bottom: 24px; padding: 10px; }
+  .ai-news-sidebar { width: min(350px, 90vw); }
+}
