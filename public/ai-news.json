@@ -1,4 +1,355 @@
 {
-  "updatedAt": null,
-  "items": []
+  "updatedAt": "2026-10-30T16:59:15Z",
+  "items": [
+    {
+      "id": "8cb2db80dc5c1d4f",
+      "title": "Theranos whistleblower Tyler Shultz warns that the AI boom is ‘a great opportunity to go deceive people’",
+      "url": "https://techcrunch.com/2026/10/30/theranos-whistleblower-tyler-shultz-warns-that-the-ai-boom-is-a-great-opportunity-to-go-deceive-people/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-30T16:03:45Z"
+    },
+    {
+      "id": "974d9b85c8fb969a",
+      "title": "Pope Leo calls for the disarmament of AI: ‘Machines are tools, not persons’",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai",
+      "source": "The Verge",
+      "publishedAt": "2026-10-30T14:58:06Z"
+    },
+    {
+      "id": "40aed769d1c2e6f7",
+      "title": "Skip the small talk: Make game-changing connections at TechCrunch Founder Summit with Braindate",
+      "url": "https://techcrunch.com/2026/10/30/skip-the-small-talk-make-game-changing-connections-at-techcrunch-founder-summit-with-braindate/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-30T14:00:00Z"
+    },
+    {
+      "id": "f986a412ee0ee44d",
+      "title": "DoorDash said it’s only received ‘several hundred’ orders from AI agents",
+      "url": "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-30T13:54:25Z"
+    },
+    {
+      "id": "5ec9437afb139212",
+      "title": "Silicon Valley wants you to invest in miracles",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023070/anthropic-ipo-risk-factors-filing-miracles",
+      "source": "The Verge",
+      "publishedAt": "2026-10-30T13:11:05Z"
+    },
+    {
+      "id": "5cfbd02556ec4a84",
+      "title": "Sam Altman sympathizes with mathematicians, but says OpenAI’s math onslaught won’t stop",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview",
+      "source": "The Verge",
+      "publishedAt": "2026-10-30T13:01:14Z"
+    },
+    {
+      "id": "cea73ec16e829377",
+      "title": "Can AI data centers be mass-produced like cars? This startup aims to find out",
+      "url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-30T13:00:00Z"
+    },
+    {
+      "id": "5135d63cacdd4300",
+      "title": "5 days left: Your last chance to connect, scale, and save at TechCrunch Founder Summit 2026",
+      "url": "https://techcrunch.com/2026/10/30/5-days-left-your-last-chance-to-connect-scale-and-save-at-techcrunch-founder-summit-2026/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-30T13:00:00Z"
+    },
+    {
+      "id": "dbfbce585037fb7a",
+      "title": "Maine’s data center revolt will decide who controls the Senate",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1021080/maine-senate-race-susan-collins-ai-data-centers",
+      "source": "The Verge",
+      "publishedAt": "2026-10-30T11:00:00Z"
+    },
+    {
+      "id": "c7606af40dbb903f",
+      "title": "Community safety report and new protections for teens",
+      "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+      "source": "OpenAI",
+      "publishedAt": "2026-10-30T09:00:00Z"
+    },
+    {
+      "id": "a973ac401cee8ade",
+      "title": "Wikipedia’s operator says a bad AI copyright ruling could threaten the open web",
+      "url": "https://www.theverge.com/policy/1022880/wikipedia-openai-new-york-times-copyright",
+      "source": "The Verge",
+      "publishedAt": "2026-10-30T09:00:00Z"
+    },
+    {
+      "id": "3e1cebb1f9f3c615",
+      "title": "You don’t need to believe in a god to get a religious exemption from using AI at work",
+      "url": "https://techcrunch.com/2026/10/29/you-dont-need-to-believe-in-a-god-to-get-a-religious-exemption-from-using-ai-at-work/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-30T01:20:48Z"
+    },
+    {
+      "id": "05367ef1f34c39f8",
+      "title": "AWS will be a $1T business, Jassy says — but first, it will spend big",
+      "url": "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-29T23:42:22Z"
+    },
+    {
+      "id": "6224c596d37f354a",
+      "title": "As search traffic dries up, Reddit announces it’s shifting to a logged-in experience",
+      "url": "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-29T20:08:31Z"
+    },
+    {
+      "id": "24f3c9778b1e494a",
+      "title": "Rivian expands joint venture with VW to include AI assistant",
+      "url": "https://techcrunch.com/2026/10/29/rivian-expands-joint-venture-with-vw-to-include-ai-assistant/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-29T20:05:47Z"
+    },
+    {
+      "id": "56fa7327f2b2eb22",
+      "title": "OpenAI-backed Thrive Holdings acquires ADT",
+      "url": "https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-29T19:56:19Z"
+    },
+    {
+      "id": "31a141606e86628d",
+      "title": "Meta quietly launches an AI fashion app called Style Sketch",
+      "url": "https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-29T19:14:36Z"
+    },
+    {
+      "id": "2a1a8a7c88a01340",
+      "title": "You can generate and edit Google Docs files directly in Gemini chats now",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs",
+      "source": "The Verge",
+      "publishedAt": "2026-10-29T18:45:31Z"
+    },
+    {
+      "id": "bf3026d4c625e902",
+      "title": "A Defense Contractor Gave Their Personal AI Agent Access to a Secure Pentagon System",
+      "url": "https://www.wired.com/story/a-defense-contractor-gave-their-personal-ai-agent-access-to-a-secure-pentagon-system/",
+      "source": "WIRED",
+      "publishedAt": "2026-10-29T18:39:43Z"
+    },
+    {
+      "id": "a39d2cb266f95450",
+      "title": "Granola crunches up a dictation feature to compete with Wispr",
+      "url": "https://techcrunch.com/2026/10/29/granola-crunches-up-a-dictation-feature-to-compete-with-wispr/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-29T17:54:38Z"
+    },
+    {
+      "id": "bcae5e5bffd4de8a",
+      "title": "Mistral releases weights for its trillion-parameter AI model, targeting cybersecurity",
+      "url": "https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-29T17:00:00Z"
+    },
+    {
+      "id": "7bf0065ceb1646f5",
+      "title": "An updated Model Spec for more capable and beneficial AI",
+      "url": "https://openai.com/index/updated-model-spec",
+      "source": "OpenAI",
+      "publishedAt": "2026-10-29T17:00:00Z"
+    },
+    {
+      "id": "7610575f95441b58",
+      "title": "US investigated Chinese spy plot aimed at Nvidia CEO",
+      "url": "https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-29T16:42:32Z"
+    },
+    {
+      "id": "88294416a4cb1079",
+      "title": "Ex-Palantir execs launch Dream with $17M from a16z to build AI world models for construction",
+      "url": "https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-29T16:21:00Z"
+    },
+    {
+      "id": "45b4ef0b726f6d16",
+      "title": "Microsoft’s AI future has fewer jobs",
+      "url": "https://www.theverge.com/tech/1022023/microsoft-exit-offer-layoffs-notepad",
+      "source": "The Verge",
+      "publishedAt": "2026-10-29T16:00:00Z"
+    },
+    {
+      "id": "a2aa84b8c0fc4ac9",
+      "title": "The ‘Pain in the Ass’ Math That Could Save Vibe Coding From Itself",
+      "url": "https://www.wired.com/story/software-verification-is-the-hot-new-answer-to-the-ai-safety-crisis/",
+      "source": "WIRED",
+      "publishedAt": "2026-10-29T15:00:00Z"
+    },
+    {
+      "id": "9d92d4ec6e5e3635",
+      "title": "The NYT Cooking app is testing AI recipe modifications",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1022193/nyt-cooking-app-ai-recipe-modification-tool",
+      "source": "The Verge",
+      "publishedAt": "2026-10-29T14:39:37Z"
+    },
+    {
+      "id": "5955274c3dce8919",
+      "title": "Mistral Says Its AI Model ‘Le Chonk’ Has Leapfrogged China in the Open-Weight Race",
+      "url": "https://www.wired.com/story/mistral-says-le-chonk-surpasses-chinese-models-cybersecurity/",
+      "source": "WIRED",
+      "publishedAt": "2026-10-29T14:00:00Z"
+    },
+    {
+      "id": "079251699e8ed6ea",
+      "title": "Anthropic is asking Wall Street to believe in AGI",
+      "url": "https://www.theverge.com/podcast/1021322/anthropic-ipo-filing-s-1-claude-semianalysis-joey-brookhart-interview",
+      "source": "The Verge",
+      "publishedAt": "2026-10-29T14:00:00Z"
+    },
+    {
+      "id": "f3538b6fb36f4f58",
+      "title": "Granite Switch 4.1.1 — Update models like you update software",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+      "source": "Hugging Face",
+      "publishedAt": "2026-10-29T13:37:07Z"
+    },
+    {
+      "id": "0b3918620b863475",
+      "title": "Anthropic’s business plan: Build God or die trying",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive",
+      "source": "The Verge",
+      "publishedAt": "2026-10-29T13:30:00Z"
+    },
+    {
+      "id": "f863128399a5ccb3",
+      "title": "We urgently need to monitor AI agents’ actions in real time",
+      "url": "https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/",
+      "source": "MIT Technology Review",
+      "publishedAt": "2026-10-29T10:11:12Z"
+    },
+    {
+      "id": "17185e5bddec7c6e",
+      "title": "I Gave My Blood to the AI Death Clock",
+      "url": "https://www.wired.com/story/i-gave-an-ai-death-clock-my-blood/",
+      "source": "WIRED",
+      "publishedAt": "2026-10-29T10:00:00Z"
+    },
+    {
+      "id": "d28967fce9c692cd",
+      "title": "How we detect frontier model misalignment",
+      "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+      "source": "OpenAI",
+      "publishedAt": "2026-10-29T09:00:00Z"
+    },
+    {
+      "id": "2d9928289658e986",
+      "title": "How Ropes & Gray is developing AI for transactional diligence",
+      "url": "https://openai.com/index/ropes-gray-ai-diligence",
+      "source": "OpenAI",
+      "publishedAt": "2026-10-29T07:00:00Z"
+    },
+    {
+      "id": "e1c742c1d925baf7",
+      "title": "Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready",
+      "url": "https://huggingface.co/blog/announcing-project-protostar",
+      "source": "Hugging Face",
+      "publishedAt": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "a1765f446c5b64b5",
+      "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
+      "url": "https://huggingface.co/blog/mistral-large4",
+      "source": "Hugging Face",
+      "publishedAt": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "85d975255b4f9d00",
+      "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
+      "url": "https://huggingface.co/blog/anydecisionmodel",
+      "source": "Hugging Face",
+      "publishedAt": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "6750c2461412185f",
+      "title": "Credit Saison achieves 954% ROI in a ChatGPT Enterprise pilot",
+      "url": "https://openai.com/index/credit-saison",
+      "source": "OpenAI",
+      "publishedAt": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "5d25973f53528cf6",
+      "title": "Creating AI value with enterprise context",
+      "url": "https://www.technologyreview.com/2026/10/28/1147709/creating-ai-value-with-enterprise-context/",
+      "source": "MIT Technology Review",
+      "publishedAt": "2026-10-28T20:32:02Z"
+    },
+    {
+      "id": "e71c51112ff92ffc",
+      "title": "I Put a Bunch of AI Agents in Charge of a Fantasy Soccer Team. They’re Not Better Than Humans—Yet",
+      "url": "https://www.wired.com/story/i-put-ai-agents-in-charge-of-a-fantasy-team/",
+      "source": "WIRED",
+      "publishedAt": "2026-10-28T18:30:00Z"
+    },
+    {
+      "id": "b0da25ea6c1a2967",
+      "title": "Gemini 4 Carbon: Our next frontier model",
+      "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-10-28T17:00:58Z"
+    },
+    {
+      "id": "7ae8eb20550eee76",
+      "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+      "source": "Hugging Face",
+      "publishedAt": "2026-10-28T14:58:17Z"
+    },
+    {
+      "id": "75e2017ed4c5a2ec",
+      "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+      "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+      "source": "OpenAI",
+      "publishedAt": "2026-10-28T13:15:00Z"
+    },
+    {
+      "id": "056614830d953cd4",
+      "title": "Pairing industrial AI autonomy and human control",
+      "url": "https://www.technologyreview.com/2026/10/28/1147637/pairing-industrial-ai-autonomy-and-human-control/",
+      "source": "MIT Technology Review",
+      "publishedAt": "2026-10-28T12:00:00Z"
+    },
+    {
+      "id": "ec6b9e654881180e",
+      "title": "Macmillan Staff Say the Publisher Threw a Party for a Workplace AI Assistant That Was Later Killed",
+      "url": "https://www.wired.com/story/macmillan-staff-say-the-publisher-threw-a-party-for-a-workplace-ai-assistant-that-was-later-killed/",
+      "source": "WIRED",
+      "publishedAt": "2026-10-28T10:15:00Z"
+    },
+    {
+      "id": "0dc3cf0b7c98dcde",
+      "title": "The future of the firm",
+      "url": "https://openai.com/index/the-future-of-the-firm",
+      "source": "OpenAI",
+      "publishedAt": "2026-10-28T10:00:00Z"
+    },
+    {
+      "id": "41c97fe8dc29ac4a",
+      "title": "Legora is building the agentic operating system for legal work",
+      "url": "https://openai.com/index/legora",
+      "source": "OpenAI",
+      "publishedAt": "2026-10-28T09:30:00Z"
+    },
+    {
+      "id": "f53a8961cc11553c",
+      "title": "AI Emergency Alerts Are Coming. Humans Might Not Be Ready",
+      "url": "https://www.wired.com/story/ai-emergency-alerts-coming-humans-not-ready/",
+      "source": "WIRED",
+      "publishedAt": "2026-10-28T08:30:00Z"
+    },
+    {
+      "id": "b3d9e88f2ebe906d",
+      "title": "Should AI Decide Your Court Case? This Judge Says Yes",
+      "url": "https://www.wired.com/story/geoffrey-vos-uk-judge-ai-legal-profession-challenges/",
+      "source": "WIRED",
+      "publishedAt": "2026-10-28T06:00:00Z"
+    }
+  ]
 }
