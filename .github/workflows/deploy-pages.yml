@@ -5,9 +5,12 @@ on:
     branches:
       - main
   workflow_dispatch:
+  # GitHub Actions refreshes headlines daily; scheduled executions may be delayed.
+  schedule:
+    - cron: "23 11 * * *"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -21,6 +24,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+
+      - name: Refresh AI news from publisher RSS feeds
+        run: python3 scripts/update-ai-news.py
+
+      - name: Persist latest news for the next deploy
+        run: |
+          git add public/ai-news.json
+          if ! git diff --cached --quiet; then
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "chore: refresh AI news digest"
+            git push origin HEAD:main
+          fi
 
       - name: Setup Node
         uses: actions/setup-node@v6
