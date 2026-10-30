@@ -46,13 +46,12 @@ DC_DATE = "{http://purl.org/dc/elements/1.1/}date"
 # Trust specialist blogs, but check headlines from general-interest outlets.
 SPECIALIST_SOURCES = {"OpenAI", "Google AI", "Google DeepMind", "Hugging Face"}
 AI_HEADLINE = re.compile(
-    r"\\b(?:AI|A\\.I\\.|LLMs?|AGI|ChatGPT|Claude|Gemini|Copilot|OpenAI|Anthropic|DeepMind|"
-    r"GPT(?:-\\d+)?|Sora|Grok|Perplexity|Mistral|Midjourney|Veo|"
-    r"chatbots?|robots?|robotics|neural|inference|generative|agents?|models?)\\b|"
+    r"\b(?:AI|A\.I\.|LLMs?|AGI|ChatGPT|Claude|Gemini|Copilot|OpenAI|Anthropic|DeepMind|"
+    r"GPT(?:-\d+)?|Sora|Grok|Perplexity|Mistral|Midjourney|Veo|"
+    r"chatbots?|robots?|robotics|neural|inference|generative|agents?|models?)\b|"
     r"artificial intelligence|machine learning|large language",
     flags=re.IGNORECASE,
 )
-
 
 def is_ai_story(title: str, source: str) -> bool:
     return source in SPECIALIST_SOURCES or AI_HEADLINE.search(title) is not None
