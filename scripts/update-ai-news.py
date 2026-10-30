@@ -42,6 +42,20 @@ SOURCES = (
 ATOM = "{http://www.w3.org/2005/Atom}"
 DC_DATE = "{http://purl.org/dc/elements/1.1/}date"
 
+# Some publisher AI-category RSS feeds include unrelated promotional posts.
+# Trust specialist blogs, but check headlines from general-interest outlets.
+SPECIALIST_SOURCES = {"OpenAI", "Google AI", "Google DeepMind", "Hugging Face"}
+AI_HEADLINE = re.compile(
+    r"\b(?:AI|A\.I\.|LLMs?|AGI|ChatGPT|Claude|Gemini|Copilot|OpenAI|Anthropic|DeepMind|"
+    r"GPT(?:-\d+)?|Sora|Grok|Perplexity|Mistral|Midjourney|Veo|"
+    r"chatbots?|robots?|robotics|neural|inference|generative|agents?|models?)\b|"
+    r"artificial intelligence|machine learning|large language",
+    flags=re.IGNORECASE,
+)
+
+def is_ai_story(title: str, source: str) -> bool:
+    return source in SPECIALIST_SOURCES or AI_HEADLINE.search(title) is not None
+
 
 def clean_title(value: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"<[^>]*>", "", html.unescape(value))).strip()[:210]
@@ -89,7 +103,7 @@ def extract_entries(xml_data: bytes, source: str, now: datetime) -> list[dict]:
         url = normalize_url(link)
         published = parse_date(node.findtext("pubDate") or node.findtext(f"{DC_DATE}")
                                or node.findtext(f"{ATOM}published") or node.findtext(f"{ATOM}updated"))
-        if not title or not url or not published or not oldest <= published <= now + timedelta(days=1):
+        if not title or not url or not published or not is_ai_story(title, source) or not oldest <= published <= now + timedelta(days=1):
             continue
         records.append({
             "id": hashlib.sha1(url.encode("utf-8")).hexdigest()[:16],
@@ -139,7 +153,7 @@ def refresh() -> bool:
         return False
 
     previous_items = previous.get("items", [])
-    combined = fetched + (previous_items if isinstance(previous_items, list) else [])
+    combined = (previous_items if isinstance(previous_items, list) else []) + fetched
     unique = {}
     earliest = now - timedelta(days=MAX_AGE_DAYS)
     for item in combined:
@@ -149,7 +163,7 @@ def refresh() -> bool:
         date = parse_date(str(item.get("publishedAt", "")))
         title = clean_title(str(item.get("title", "")))
         source = str(item.get("source", ""))[:80]
-        if not url or not title or not source or not date or not earliest <= date <= now + timedelta(days=1):
+        if not url or not title or not source or not date or not is_ai_story(title, source) or not earliest <= date <= now + timedelta(days=1):
             continue
         unique[url] = {
             "id": hashlib.sha1(url.encode("utf-8")).hexdigest()[:16],
