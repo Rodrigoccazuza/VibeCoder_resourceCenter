@@ -63,3 +63,14 @@ A responsive, searchable resource center built from Rodrigo Cazuza's 214-item No
 - [ ] Approved logo asset supplied.
 - [ ] Unverified destinations approved.
 - [ ] Formal accessibility target and deadline confirmed.
+
+## GitHub hub and AI news (October 2026)
+
+- The **GitHub** parent item in the left sidebar expands into **Open-source Apps & Tools** and **Skills**. Both subcategories use the same resource cards, search terms and filters as the rest of the library.
+- A catalog of 28 GitHub repositories is defined in `app/githubResources.ts`; five older GitHub entries are included in the apps subcategory. All linked repositories were checked when added.
+- The **AI News** rail collapses from the right, remembers the visitor's preference, and includes weekly headlines or the complete rolling feed. It displays publisher favicons and opens original articles.
+- News is a **static public JSON file** in `public/ai-news.json`, not a resource or database table. A standard-library Python script (`scripts/update-ai-news.py`) reads publisher RSS feeds, removes duplicates and keeps at most 50 links, automatically discarding older items.
+- The GitHub Pages deployment workflow updates the digest on every push to `main`, via manual dispatch, and daily at **11:23 UTC**. GitHub scheduled jobs can be delayed. If all external feeds fail, the last successful digest is preserved.
+- To refresh manually on a machine with Python 3 and internet access, run `python3 scripts/update-ai-news.py`, then rebuild the static site. No third-party news API key is required.
+- Publisher feeds and favicon services are external; individual feeds or icons may occasionally be unavailable. Headlines are links to external journalism rather than locally stored article text.
+
