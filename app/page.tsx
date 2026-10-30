@@ -301,7 +301,7 @@ export default function Home() {
           <p className="nav-label">Explore</p>
           <button className={category === "All resources" ? "active" : ""} onClick={() => selectCategory("All resources")}><span className="nav-icon"><Icon name="grid" /></span><span>All resources</span><b>{resourceCatalog.length}</b></button>
           <div className="github-nav-group">
-            <button className={`github-parent ${category === "GitHub" || GITHUB_CATEGORIES.includes(category) ? "active" : ""}`} aria-expanded={githubExpanded} aria-controls="github-subcategories" onClick={() => { if (githubExpanded) { setGithubExpanded(false); selectCategory("GitHub"); setGithubExpanded(false); } else { selectCategory("GitHub"); } }}>
+            <button className={`github-parent ${category === "GitHub" || GITHUB_CATEGORIES.includes(category) ? "active" : ""}`} aria-expanded={githubExpanded} aria-controls="github-subcategories" onClick={() => { setGithubExpanded((expanded) => !expanded); setCategory("GitHub"); setVisible(24); }}>
               <span className="category-code">GH</span><span>GitHub</span><b>{countCategory("GitHub")}</b><span className={`github-chevron ${githubExpanded ? "rotated" : ""}`}><Icon name="chevron" /></span>
             </button>
             {githubExpanded && <div id="github-subcategories" className="github-subcategories">
